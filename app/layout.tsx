@@ -1,27 +1,35 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import type { Metadata } from 'next';
 import '@/styles/globals.css';
 import { Providers } from './providers';
-
-const inter = Inter({ subsets: ['latin'] })
+import clsx from 'clsx';
+import { fontSans } from '@/public/fonts/fonts';
 
 export const metadata: Metadata = {
   title: 'K-POP Goods',
   description: 'K-POP Goods Platform',
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="ko">
-      <body className={inter.className}>
+      <body
+        className={clsx(
+          'bg-background text-white min-h-screen min-w-desktop font-sans antialiased',
+          fontSans.variable,
+        )}
+      >
         <Providers>
-          {children}
+          <div className="h-screen ">
+            <main className="flex flex-col items-center h-full w-desktop">
+              {children}
+            </main>
+          </div>
         </Providers>
       </body>
     </html>
-  )
+  );
 }
