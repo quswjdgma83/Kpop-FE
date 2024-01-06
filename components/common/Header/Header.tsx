@@ -36,14 +36,14 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <Navbar className="py-5">
-      <NavbarBrand>
+    <Navbar className="py-5 justify-between" shouldHideOnScroll>
+      <NavbarBrand className="mr-20">
         <Link href="/" className="text-4xl ">
           LOGO
         </Link>
       </NavbarBrand>
 
-      <NavbarContent justify="start">
+      <NavbarContent justify="start" className="mr-20">
         <ul className="flex gap-4">
           {items.map(({ index, href, label }) => {
             const textColor = pathname?.endsWith(href)
@@ -61,11 +61,11 @@ export default function Header() {
         </ul>
       </NavbarContent>
 
-      <NavbarContent justify="end">
+      <NavbarContent justify="end" className="ml-80">
         <form action="">
           <input
             type="text"
-            className="bg-background border border-basic text-basic w-[300px] h-10 pl-4 ml-40 text-sm"
+            className="bg-background border border-basic text-basic w-[300px] h-10 pl-4 text-sm"
             placeholder="다양한 굿즈들을 찾아보세요!"
           />
         </form>
