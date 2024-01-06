@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
-import '@/styles/globals.css';
 import { Providers } from './providers';
-import clsx from 'clsx';
-import { fontSans } from '@/public/fonts/fonts';
+import '../styles/globals.css';
+import { fontSans } from '../public/fonts/fonts';
+import Header from '@/components/common/Header';
+import Footer from '@/components/common/Footer';
 
 export const metadata: Metadata = {
   title: 'K-POP Goods',
@@ -17,15 +18,14 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body
-        className={clsx(
-          'bg-background text-white min-h-screen min-w-desktop font-sans antialiased',
-          fontSans.variable,
-        )}
+        className={`bg-background text-white min-h-screen min-w-desktop ${fontSans.variable} font-sans`}
       >
         <Providers>
-          <div className="h-screen ">
-            <main className="flex flex-col items-center h-full w-desktop">
+          <div className="h-100 w-desktop mx-auto">
+            <main className="flex flex-col items-center h-full w-full">
+              <Header />
               {children}
+              <Footer />
             </main>
           </div>
         </Providers>
