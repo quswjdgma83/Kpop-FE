@@ -33,9 +33,7 @@ export default function Item({
       isBlurred
     >
       <CardHeader className="absolute top-0 z-10 flex justify-end">
-        <Button isIconOnly variant="light">
-          <IconHeart />
-        </Button>
+        <IconHeart />
       </CardHeader>
 
       <Image
