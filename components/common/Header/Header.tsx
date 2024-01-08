@@ -36,7 +36,7 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <Navbar className="py-5 justify-between" shouldHideOnScroll>
+    <Navbar className="justify-between py-5" shouldHideOnScroll>
       <NavbarBrand className="mr-20">
         <Link href="/" className="text-4xl ">
           LOGO

@@ -1,12 +1,13 @@
 import Link from 'next/link';
 import { Button, Chip } from '@nextui-org/react';
 import { IconAdd, IconCancel } from '@/public/svgs';
+import Item from '@/containers/goods/Item';
 
 interface GoodsProps {
   searchParams: { [key: string]: string | string[] | undefined };
 }
 
-const categoryItems = [
+const categoryList = [
   {
     index: 0,
     label: '전체',
@@ -87,7 +88,7 @@ const categoryItems = [
   },
 ];
 
-const orderItems = [
+const orderList = [
   {
     index: 0,
     label: '최신순',
@@ -114,7 +115,7 @@ const orderItems = [
   },
 ];
 
-const idolItems = [
+const idolList = [
   {
     index: 0,
     label: 'NCT',
@@ -124,17 +125,332 @@ const idolItems = [
     label: 'BTS',
   },
   {
-    index: 0,
+    index: 2,
     label: 'New Jeans',
+  },
+];
+
+const itemList = [
+  {
+    index: 0,
+    item_image: '/mocks/goods_rabbit.png',
+    item_label: '🐰맠묘&묘맠 선입금🐱',
+    item_price: 14000,
+    item_date_start: '2023.11.21',
+    item_date_end: '2023.12.05',
+    item_view: 999999,
+    user_avatar: '/mocks/user_avatar.png',
+    user_name: '맠묘',
+    user_id: 'markmyo',
+  },
+  {
+    index: 1,
+    item_image: '/mocks/goods_rabbit.png',
+    item_label: '🐰맠묘&묘맠 선입금🐱',
+    item_price: 14000,
+    item_date_start: '2023.11.21',
+    item_date_end: '2023.12.05',
+    item_view: 999999,
+    user_avatar: '/mocks/user_avatar.png',
+    user_name: '맠묘',
+    user_id: 'markmyo',
+  },
+  {
+    index: 2,
+    item_image: '/mocks/goods_rabbit.png',
+    item_label: '🐰맠묘&묘맠 선입금🐱',
+    item_price: 14000,
+    item_date_start: '2023.11.21',
+    item_date_end: '2023.12.05',
+    item_view: 999999,
+    user_avatar: '/mocks/user_avatar.png',
+    user_name: '맠묘',
+    user_id: 'markmyo',
+  },
+  {
+    index: 3,
+    item_image: '/mocks/goods_rabbit.png',
+    item_label: '🐰맠묘&묘맠 선입금🐱',
+    item_price: 14000,
+    item_date_start: '2023.11.21',
+    item_date_end: '2023.12.05',
+    item_view: 999999,
+    user_avatar: '/mocks/user_avatar.png',
+    user_name: '맠묘',
+    user_id: 'markmyo',
+  },
+  {
+    index: 4,
+    item_image: '/mocks/goods_rabbit.png',
+    item_label: '🐰맠묘&묘맠 선입금🐱',
+    item_price: 14000,
+    item_date_start: '2023.11.21',
+    item_date_end: '2023.12.05',
+    item_view: 999999,
+    user_avatar: '/mocks/user_avatar.png',
+    user_name: '맠묘',
+    user_id: 'markmyo',
+  },
+  {
+    index: 5,
+    item_image: '/mocks/goods_rabbit.png',
+    item_label: '🐰맠묘&묘맠 선입금🐱',
+    item_price: 14000,
+    item_date_start: '2023.11.21',
+    item_date_end: '2023.12.05',
+    item_view: 999999,
+    user_avatar: '/mocks/user_avatar.png',
+    user_name: '맠묘',
+    user_id: 'markmyo',
+  },
+  {
+    index: 6,
+    item_image: '/mocks/goods_rabbit.png',
+    item_label: '🐰맠묘&묘맠 선입금🐱',
+    item_price: 14000,
+    item_date_start: '2023.11.21',
+    item_date_end: '2023.12.05',
+    item_view: 999999,
+    user_avatar: '/mocks/user_avatar.png',
+    user_name: '맠묘',
+    user_id: 'markmyo',
+  },
+  {
+    index: 7,
+    item_image: '/mocks/goods_rabbit.png',
+    item_label: '🐰맠묘&묘맠 선입금🐱',
+    item_price: 14000,
+    item_date_start: '2023.11.21',
+    item_date_end: '2023.12.05',
+    item_view: 999999,
+    user_avatar: '/mocks/user_avatar.png',
+    user_name: '맠묘',
+    user_id: 'markmyo',
+  },
+  {
+    index: 8,
+    item_image: '/mocks/goods_rabbit.png',
+    item_label: '🐰맠묘&묘맠 선입금🐱',
+    item_price: 14000,
+    item_date_start: '2023.11.21',
+    item_date_end: '2023.12.05',
+    item_view: 999999,
+    user_avatar: '/mocks/user_avatar.png',
+    user_name: '맠묘',
+    user_id: 'markmyo',
+  },
+  {
+    index: 9,
+    item_image: '/mocks/goods_rabbit.png',
+    item_label: '🐰맠묘&묘맠 선입금🐱',
+    item_price: 14000,
+    item_date_start: '2023.11.21',
+    item_date_end: '2023.12.05',
+    item_view: 999999,
+    user_avatar: '/mocks/user_avatar.png',
+    user_name: '맠묘',
+    user_id: 'markmyo',
+  },
+  {
+    index: 10,
+    item_image: '/mocks/goods_rabbit.png',
+    item_label: '🐰맠묘&묘맠 선입금🐱',
+    item_price: 14000,
+    item_date_start: '2023.11.21',
+    item_date_end: '2023.12.05',
+    item_view: 999999,
+    user_avatar: '/mocks/user_avatar.png',
+    user_name: '맠묘',
+    user_id: 'markmyo',
+  },
+  {
+    index: 11,
+    item_image: '/mocks/goods_rabbit.png',
+    item_label: '🐰맠묘&묘맠 선입금🐱',
+    item_price: 14000,
+    item_date_start: '2023.11.21',
+    item_date_end: '2023.12.05',
+    item_view: 999999,
+    user_avatar: '/mocks/user_avatar.png',
+    user_name: '맠묘',
+    user_id: 'markmyo',
+  },
+  {
+    index: 12,
+    item_image: '/mocks/goods_rabbit.png',
+    item_label: '🐰맠묘&묘맠 선입금🐱',
+    item_price: 14000,
+    item_date_start: '2023.11.21',
+    item_date_end: '2023.12.05',
+    item_view: 999999,
+    user_avatar: '/mocks/user_avatar.png',
+    user_name: '맠묘',
+    user_id: 'markmyo',
+  },
+  {
+    index: 13,
+    item_image: '/mocks/goods_rabbit.png',
+    item_label: '🐰맠묘&묘맠 선입금🐱',
+    item_price: 14000,
+    item_date_start: '2023.11.21',
+    item_date_end: '2023.12.05',
+    item_view: 999999,
+    user_avatar: '/mocks/user_avatar.png',
+    user_name: '맠묘',
+    user_id: 'markmyo',
+  },
+  {
+    index: 14,
+    item_image: '/mocks/goods_rabbit.png',
+    item_label: '🐰맠묘&묘맠 선입금🐱',
+    item_price: 14000,
+    item_date_start: '2023.11.21',
+    item_date_end: '2023.12.05',
+    item_view: 999999,
+    user_avatar: '/mocks/user_avatar.png',
+    user_name: '맠묘',
+    user_id: 'markmyo',
+  },
+  {
+    index: 15,
+    item_image: '/mocks/goods_rabbit.png',
+    item_label: '🐰맠묘&묘맠 선입금🐱',
+    item_price: 14000,
+    item_date_start: '2023.11.21',
+    item_date_end: '2023.12.05',
+    item_view: 999999,
+    user_avatar: '/mocks/user_avatar.png',
+    user_name: '맠묘',
+    user_id: 'markmyo',
+  },
+  {
+    index: 16,
+    item_image: '/mocks/goods_rabbit.png',
+    item_label: '🐰맠묘&묘맠 선입금🐱',
+    item_price: 14000,
+    item_date_start: '2023.11.21',
+    item_date_end: '2023.12.05',
+    item_view: 999999,
+    user_avatar: '/mocks/user_avatar.png',
+    user_name: '맠묘',
+    user_id: 'markmyo',
+  },
+  {
+    index: 17,
+    item_image: '/mocks/goods_rabbit.png',
+    item_label: '🐰맠묘&묘맠 선입금🐱',
+    item_price: 14000,
+    item_date_start: '2023.11.21',
+    item_date_end: '2023.12.05',
+    item_view: 999999,
+    user_avatar: '/mocks/user_avatar.png',
+    user_name: '맠묘',
+    user_id: 'markmyo',
+  },
+  {
+    index: 18,
+    item_image: '/mocks/goods_rabbit.png',
+    item_label: '🐰맠묘&묘맠 선입금🐱',
+    item_price: 14000,
+    item_date_start: '2023.11.21',
+    item_date_end: '2023.12.05',
+    item_view: 999999,
+    user_avatar: '/mocks/user_avatar.png',
+    user_name: '맠묘',
+    user_id: 'markmyo',
+  },
+  {
+    index: 19,
+    item_image: '/mocks/goods_rabbit.png',
+    item_label: '🐰맠묘&묘맠 선입금🐱',
+    item_price: 14000,
+    item_date_start: '2023.11.21',
+    item_date_end: '2023.12.05',
+    item_view: 999999,
+    user_avatar: '/mocks/user_avatar.png',
+    user_name: '맠묘',
+    user_id: 'markmyo',
+  },
+  {
+    index: 20,
+    item_image: '/mocks/goods_rabbit.png',
+    item_label: '🐰맠묘&묘맠 선입금🐱',
+    item_price: 14000,
+    item_date_start: '2023.11.21',
+    item_date_end: '2023.12.05',
+    item_view: 999999,
+    user_avatar: '/mocks/user_avatar.png',
+    user_name: '맠묘',
+    user_id: 'markmyo',
+  },
+  {
+    index: 21,
+    item_image: '/mocks/goods_rabbit.png',
+    item_label: '🐰맠묘&묘맠 선입금🐱',
+    item_price: 14000,
+    item_date_start: '2023.11.21',
+    item_date_end: '2023.12.05',
+    item_view: 999999,
+    user_avatar: '/mocks/user_avatar.png',
+    user_name: '맠묘',
+    user_id: 'markmyo',
+  },
+  {
+    index: 22,
+    item_image: '/mocks/goods_rabbit.png',
+    item_label: '🐰맠묘&묘맠 선입금🐱',
+    item_price: 14000,
+    item_date_start: '2023.11.21',
+    item_date_end: '2023.12.05',
+    item_view: 999999,
+    user_avatar: '/mocks/user_avatar.png',
+    user_name: '맠묘',
+    user_id: 'markmyo',
+  },
+  {
+    index: 23,
+    item_image: '/mocks/goods_rabbit.png',
+    item_label: '🐰맠묘&묘맠 선입금🐱',
+    item_price: 14000,
+    item_date_start: '2023.11.21',
+    item_date_end: '2023.12.05',
+    item_view: 999999,
+    user_avatar: '/mocks/user_avatar.png',
+    user_name: '맠묘',
+    user_id: 'markmyo',
+  },
+  {
+    index: 24,
+    item_image: '/mocks/goods_rabbit.png',
+    item_label: '🐰맠묘&묘맠 선입금🐱',
+    item_price: 14000,
+    item_date_start: '2023.11.21',
+    item_date_end: '2023.12.05',
+    item_view: 999999,
+    user_avatar: '/mocks/user_avatar.png',
+    user_name: '맠묘',
+    user_id: 'markmyo',
+  },
+  {
+    index: 25,
+    item_image: '/mocks/goods_rabbit.png',
+    item_label: '🐰맠묘&묘맠 선입금🐱',
+    item_price: 14000,
+    item_date_start: '2023.11.21',
+    item_date_end: '2023.12.05',
+    item_view: 999999,
+    user_avatar: '/mocks/user_avatar.png',
+    user_name: '맠묘',
+    user_id: 'markmyo',
   },
 ];
 
 export default function Goods({ searchParams }: GoodsProps) {
   return (
     <div className="w-full">
-      <section>
+      <section className="mb-9">
         <nav className="flex justify-center gap-5 mb-9">
-          {categoryItems.map(({ index, label, category, href }) => {
+          {categoryList.map(({ index, label, category, href }) => {
             const borderColor =
               searchParams?.category === category
                 ? 'border-highlight'
@@ -167,14 +483,14 @@ export default function Goods({ searchParams }: GoodsProps) {
           </h1>
 
           <nav>
-            {orderItems.map(({ index, label, order, href }) => {
+            {orderList.map(({ index, label, order, href }) => {
               return (
                 <Button
                   size="sm"
                   variant="light"
                   radius="full"
                   key={index}
-                  className="text-basic text-lg"
+                  className="text-lg text-basic"
                 >
                   {label}
                 </Button>
@@ -183,13 +499,14 @@ export default function Goods({ searchParams }: GoodsProps) {
           </nav>
         </div>
 
-        <div className="flex gap-5 items-center">
-          {idolItems.map(({ index, label }) => (
+        <div className="flex items-center gap-5">
+          {idolList.map(({ index, label }) => (
             <Chip
               radius="sm"
               variant="bordered"
               className="text-highlight border-highlight"
               endContent={<IconCancel />}
+              key={index}
               // onClose={() => console.log('close')}
             >
               {label}
@@ -201,11 +518,41 @@ export default function Goods({ searchParams }: GoodsProps) {
             size="sm"
             radius="sm"
             variant="bordered"
-            className="text-highlight border-highlight p-0"
+            className="p-0 text-highlight border-highlight"
           >
             <IconAdd />
           </Button>
         </div>
+      </section>
+
+      <section className="grid grid-cols-5 gap-x-3 gap-y-9">
+        {itemList.map(
+          ({
+            index,
+            item_image,
+            item_label,
+            item_price,
+            item_date_start,
+            item_date_end,
+            item_view,
+            user_avatar,
+            user_name,
+            user_id,
+          }) => (
+            <Item
+              key={index}
+              item_image={item_image}
+              item_label={item_label}
+              item_price={item_price}
+              item_date_start={item_date_start}
+              item_date_end={item_date_end}
+              item_view={item_view}
+              user_avatar={user_avatar}
+              user_name={user_name}
+              user_id={user_id}
+            />
+          ),
+        )}
       </section>
     </div>
   );

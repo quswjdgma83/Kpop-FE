@@ -14,7 +14,8 @@ const config: Config = {
         background: '#191919',
         basic: '#FFFFFF',
         highlight: '#1FFBFB',
-        inactive: 'rgba(255, 255, 255, 0.58)'
+        inactive: 'rgba(255, 255, 255, 0.58)',
+        black: '#000000'
       },
       width: {
         desktop: '1280px'

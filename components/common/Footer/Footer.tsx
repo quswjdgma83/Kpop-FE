@@ -1,8 +1,8 @@
 export default function Footer() {
   return (
-    <footer className="flex w-full justify-between text-inactive text-sm relative my-24">
+    <footer className="relative flex justify-between w-full my-24 text-sm text-inactive">
       <section className="flex flex-col">
-        <p className="text-4xl text-basic mb-12">LOGO</p>
+        <p className="mb-12 text-4xl text-basic">LOGO</p>
         <div className="flex gap-28">
           <div>
             <p className="mb-12">CONTACT US</p>

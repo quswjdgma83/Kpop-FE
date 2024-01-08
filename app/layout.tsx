@@ -21,8 +21,8 @@ export default function RootLayout({
         className={`bg-background text-white min-h-screen min-w-desktop ${fontSans.variable} font-sans`}
       >
         <Providers>
-          <div className="h-100 w-desktop mx-auto">
-            <main className="flex flex-col items-center h-full w-full">
+          <div className="mx-auto h-100 w-desktop">
+            <main className="flex flex-col items-center w-full h-full">
               <Header />
               {children}
               <Footer />
