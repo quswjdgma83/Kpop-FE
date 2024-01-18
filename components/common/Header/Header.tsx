@@ -37,48 +37,64 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <Navbar className="justify-between py-5" shouldHideOnScroll>
-      <NavbarBrand className="mr-20">
-        <Link href="/" className="text-4xl ">
-          LOGO
-        </Link>
-      </NavbarBrand>
+    <header className="h-16 mx-auto ">
+      <Navbar
+        className="relative items-center"
+        shouldHideOnScroll
+        position="static"
+      >
+        <NavbarBrand className="absolute left-[-128px]">
+          <Link href="/" className="text-3xl ">
+            LOGO
+          </Link>
+        </NavbarBrand>
 
-      <NavbarContent justify="start" className="mr-20">
-        <ul className="flex gap-4">
-          {items.map(({ index, href, label }) => {
-            const textColor = pathname?.endsWith(href)
-              ? 'text-highlight'
-              : 'text-basic';
+        <NavbarContent justify="start">
+          <ul className="flex gap-6 ">
+            {items.map(({ index, href, label }) => {
+              const textColor = pathname?.endsWith(href)
+                ? 'text-highlight'
+                : 'text-basic';
 
-            return (
-              <NavbarItem key={index}>
-                <Link href={href} className={textColor}>
-                  {label}
-                </Link>
-              </NavbarItem>
-            );
-          })}
-        </ul>
-      </NavbarContent>
+              return (
+                <NavbarItem key={index} className="text-xl">
+                  <Link href={href} className={textColor}>
+                    {label}
+                  </Link>
+                </NavbarItem>
+              );
+            })}
+          </ul>
+        </NavbarContent>
 
-      <NavbarContent justify="end" className="ml-80">
-        <form action="">
-          <Input
-            type="text"
-            className="h-10 pl-4 text-sm text-basic border-basic w-[300px] "
-            size="sm"
-            variant="bordered"
-            placeholder="다양한 굿즈들을 찾아보세요!"
-          />
-        </form>
-        <NavbarItem className="hidden lg:flex">
-          <Link href="/signin">로그인</Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link href="/signup">회원가입</Link>
-        </NavbarItem>
-      </NavbarContent>
-    </Navbar>
+        <NavbarContent justify="end" className="absolute right-[128px]">
+          <NavbarItem>
+            <form action="">
+              <Input
+                type="text"
+                className="h-9 py-0 text-sm text-basic w-[340px]"
+                size="sm"
+                variant="bordered"
+                placeholder="다양한 굿즈들을 찾아보세요!"
+                radius="none"
+              />
+            </form>
+          </NavbarItem>
+        </NavbarContent>
+
+        <NavbarContent justify="end" className="absolute right-[-127px] gap-7">
+          <NavbarItem>
+            <Link href="/signin" className="text-xl">
+              로그인
+            </Link>
+          </NavbarItem>
+          <NavbarItem>
+            <Link href="/signup" className="text-xl">
+              회원가입
+            </Link>
+          </NavbarItem>
+        </NavbarContent>
+      </Navbar>
+    </header>
   );
 }
