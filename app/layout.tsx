@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Providers } from './providers';
-import '../styles/globals.css';
-import { fontSans } from '../public/fonts/fonts';
+import '@/styles/globals.css';
+import { inter } from '../public/fonts/fonts';
 import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
 
@@ -18,16 +18,12 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body
-        className={`bg-background text-white min-h-screen min-w-desktop ${fontSans.variable} font-sans`}
+        className={`${inter.variable} bg-background text-white h-full min-h-screen `}
       >
         <Providers>
-          <div className="h-100 w-desktop mx-auto">
-            <main className="flex flex-col items-center h-full w-full">
-              <Header />
-              {children}
-              <Footer />
-            </main>
-          </div>
+          <Header />
+          <main className="h-full mx-auto mt-10 w-desktop">{children}</main>
+          <Footer />
         </Providers>
       </body>
     </html>
