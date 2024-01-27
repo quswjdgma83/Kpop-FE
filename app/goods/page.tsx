@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Button, Chip, Input } from '@nextui-org/react';
-import { IconAdd, IconCancel } from '@/public/svgs';
+import { IconAdd, IconCancel, IconSearch } from '@/public/svgs';
 import Item from '@/containers/goods/Item';
 
 interface GoodsProps {
@@ -426,6 +426,7 @@ export default function Goods({ searchParams }: GoodsProps) {
             radius="none"
             variant="bordered"
             placeholder="다양한 굿즈들을 검색해보세요 !"
+            endContent={<IconSearch />}
             className="h-9 w-[440px] p-0 mx-auto"
           />
           <nav className="flex justify-between px-4">
