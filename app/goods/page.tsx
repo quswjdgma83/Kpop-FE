@@ -50,7 +50,7 @@ const categoryList = [
   },
   {
     label: '스티커',
-    categody: 'sticker',
+    category: 'sticker',
   },
   {
     label: '잡화',
@@ -431,16 +431,16 @@ export default function Goods({ searchParams }: GoodsProps) {
             className="h-9 w-[440px] p-0 mx-auto"
           />
           <nav className="flex justify-between px-4">
-            {categoryList.map(({ label, category }, index) => {
+            {categoryList.map(({ label, category }) => {
               const borderColor =
                 searchParams?.category === category
                   ? 'border-highlight'
-                  : 'border-basic';
+                  : 'border-white';
 
               const textColor =
                 searchParams?.category === category
                   ? 'text-highlight'
-                  : 'text-basic';
+                  : 'text-white';
 
               return (
                 <Button
