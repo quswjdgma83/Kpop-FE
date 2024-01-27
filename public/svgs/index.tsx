@@ -4,5 +4,14 @@ import IconEyeOpen from './EyeOpen';
 import IconHeart from './Heart';
 import IconSearch from './Search';
 import IconWish from './Wish';
+import IconArrowLeft from './ArrowLeft';
 
-export { IconAdd, IconCancel, IconEyeOpen, IconHeart, IconSearch, IconWish };
+export {
+  IconAdd,
+  IconCancel,
+  IconEyeOpen,
+  IconHeart,
+  IconSearch,
+  IconWish,
+  IconArrowLeft,
+};
