@@ -13,6 +13,7 @@ const config: Config = {
     extend: {
       colors: {
         background: '#191919',
+        component: '#232323',
         highlight: '#1FFBFB',
         inactive: 'rgba(255, 255, 255, 0.58)',
       },

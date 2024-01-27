@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Button, Chip } from '@nextui-org/react';
+import { Button, Chip, Input } from '@nextui-org/react';
 import { IconAdd, IconCancel } from '@/public/svgs';
 import Item from '@/containers/goods/Item';
 
@@ -9,82 +9,56 @@ interface GoodsProps {
 
 const categoryList = [
   {
-    index: 0,
     label: '전체',
     category: 'all',
-    href: '/goods',
   },
   {
-    index: 1,
     label: '인형',
     category: 'doll',
-    href: '?category=doll',
   },
   {
-    index: 2,
     label: '키링',
     category: 'keyring',
-    href: '?category=keyring',
   },
   {
-    index: 3,
     label: '응원봉',
     category: 'lightstick',
-    href: '?category=lightstick',
   },
   {
-    index: 4,
     label: '슬로건',
     category: 'slogan',
-    href: '?category=slogan',
   },
   {
-    index: 5,
     label: '패션',
     category: 'fashion',
-    href: '?category=fashion',
   },
   {
-    index: 6,
     label: '포토카드',
     category: 'photocard',
-    href: '?category=photocard',
   },
   {
-    index: 7,
     label: '포토북',
     category: 'photobook',
-    href: '?category=photobook',
   },
   {
-    index: 8,
     label: '컵홀더',
     category: 'cupholder',
-    href: '?category=cupholder',
   },
   {
-    index: 9,
     label: '텀블러',
     category: 'tumbler',
-    href: '?category=tumbler',
   },
   {
-    index: 10,
     label: '스티커',
-    category: 'sticker',
-    href: '?category=sticker',
+    categody: 'sticker',
   },
   {
-    index: 11,
     label: '잡화',
     category: 'stuff',
-    href: '?category=stuff',
   },
   {
-    index: 12,
     label: '지류굿즈',
     category: 'paper',
-    href: '?category=paper',
   },
 ];
 
@@ -117,15 +91,12 @@ const orderList = [
 
 const idolList = [
   {
-    index: 0,
     label: 'NCT',
   },
   {
-    index: 1,
     label: 'BTS',
   },
   {
-    index: 2,
     label: 'New Jeans',
   },
 ];
@@ -449,32 +420,40 @@ export default function Goods({ searchParams }: GoodsProps) {
   return (
     <div className="w-full">
       <section className="mb-9">
-        <nav className="flex justify-center gap-5 mb-9">
-          {categoryList.map(({ index, label, category, href }) => {
-            const borderColor =
-              searchParams?.category === category
-                ? 'border-highlight'
-                : 'border-basic';
+        <div className="flex flex-col gap-10 justify-center bg-black py-10 mb-8">
+          <Input
+            size="sm"
+            radius="none"
+            variant="bordered"
+            placeholder="다양한 굿즈들을 검색해보세요 !"
+            className="h-9 w-[440px] p-0 mx-auto"
+          />
+          <nav className="flex justify-between px-4">
+            {categoryList.map(({ label, category }, index) => {
+              const borderColor =
+                searchParams?.category === category
+                  ? 'border-highlight'
+                  : 'border-basic';
 
-            const textColor =
-              searchParams?.category === category
-                ? 'text-highlight'
-                : 'text-basic';
+              const textColor =
+                searchParams?.category === category
+                  ? 'text-highlight'
+                  : 'text-basic';
 
-            return (
-              <Link href={href}>
-                <Chip
+              return (
+                <Button
+                  as={Link}
+                  href={`?category=${category}`}
                   variant="bordered"
                   radius="full"
-                  key={index}
-                  className={`${borderColor} ${textColor} text-base`}
+                  className={`${borderColor} ${textColor} text-base h-9`}
                 >
                   {label}
-                </Chip>
-              </Link>
-            );
-          })}
-        </nav>
+                </Button>
+              );
+            })}
+          </nav>
+        </div>
 
         <div className="flex justify-between mb-5">
           <h1 className="text-xl">
@@ -500,7 +479,7 @@ export default function Goods({ searchParams }: GoodsProps) {
         </div>
 
         <div className="flex items-center gap-5">
-          {idolList.map(({ index, label }) => (
+          {idolList.map(({ label }, index) => (
             <Chip
               radius="sm"
               variant="bordered"
