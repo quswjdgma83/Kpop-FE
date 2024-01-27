@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Chip, Button } from '@nextui-org/react';
 import { GoBackButton } from '@/components/common';
+import { IconShare } from '@/public/svgs';
 
 const item = {
   item_id: '1',
@@ -31,7 +32,7 @@ export default function GoodsDetail({
         <GoBackButton />
       </nav>
 
-      <div className="flex gap-8">
+      <div className="flex gap-8 relative">
         <Image
           src={item.item_image}
           width={500}
@@ -74,6 +75,12 @@ export default function GoodsDetail({
               좋아요
             </Button>
           </div>
+        </section>
+
+        <section className="absolute top-0 right-0 flex flex-col gap-5">
+          <Button isIconOnly className="bg-transparent">
+            <IconShare />
+          </Button>
         </section>
       </div>
     </div>
