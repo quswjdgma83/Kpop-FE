@@ -6,6 +6,7 @@ import IconSearch from './Search';
 import IconWish from './Wish';
 import IconArrowLeft from './ArrowLeft';
 import IconShare from './Share';
+import IconArrowRight from './ArrowRight';
 
 export {
   IconAdd,
@@ -16,4 +17,5 @@ export {
   IconWish,
   IconArrowLeft,
   IconShare,
+  IconArrowRight,
 };

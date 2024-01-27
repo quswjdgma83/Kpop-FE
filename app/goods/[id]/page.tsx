@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { Chip, Button } from '@nextui-org/react';
 import { GoBackButton } from '@/components/common';
-import { IconShare } from '@/public/svgs';
+import { IconShare, IconArrowRight } from '@/public/svgs';
 
 const item = {
   item_id: '1',
@@ -43,10 +43,11 @@ export default function GoodsDetail({
 
         <section className="w-full flex flex-col justify-between">
           <div className="flex flex-col gap-5">
-            <div className="flex gap-12">
+            <div className="flex gap-6 items-center">
               <Chip variant="bordered" className="text-white">
                 {item.item_category}
               </Chip>
+              <IconArrowRight />
               <p>{`${item.artist_name} / ${item.artist_agency}`}</p>
             </div>
             <Chip color="warning" size="sm">
