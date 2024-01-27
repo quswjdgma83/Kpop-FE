@@ -509,7 +509,7 @@ export default function Goods({ searchParams }: GoodsProps) {
         </div>
       </section>
 
-      <section className="grid grid-cols-5 gap-y-9">
+      <section className="grid grid-cols-5 gap-x-4 gap-y-9">
         {itemList.map(
           ({
             item_id,
