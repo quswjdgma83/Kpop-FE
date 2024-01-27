@@ -51,7 +51,7 @@ export default function Header() {
         <NavbarContent justify="start">
           <ul className="flex gap-6 ">
             {items.map(({ index, href, label }) => {
-              const textColor = pathname?.endsWith(href)
+              const textColor = pathname?.startsWith(href)
                 ? 'text-highlight'
                 : 'text-basic';
 
