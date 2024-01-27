@@ -16,10 +16,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko">
-      <body
-        className={`${inter.variable} bg-background text-white h-full min-h-screen `}
-      >
+    <html lang="ko" className="bg-background">
+      <body className={`${inter.variable} text-white h-full min-h-screen `}>
         <Providers>
           <Header />
           <main className="h-full mx-auto mt-10 w-desktop">{children}</main>

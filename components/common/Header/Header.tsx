@@ -7,7 +7,6 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  Input,
 } from '@nextui-org/react';
 
 const items = [
@@ -65,21 +64,6 @@ export default function Header() {
               );
             })}
           </ul>
-        </NavbarContent>
-
-        <NavbarContent justify="end" className="absolute right-[128px]">
-          <NavbarItem>
-            <form action="">
-              <Input
-                type="text"
-                className="h-9 py-0 text-sm text-basic w-[340px]"
-                size="sm"
-                variant="bordered"
-                placeholder="다양한 굿즈들을 찾아보세요!"
-                radius="none"
-              />
-            </form>
-          </NavbarItem>
         </NavbarContent>
 
         <NavbarContent justify="end" className="absolute right-[-127px] gap-7">
