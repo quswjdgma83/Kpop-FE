@@ -117,7 +117,8 @@ const itemList = [
   {
     index: 1,
     item_image: '/mocks/goods_rabbit.png',
-    item_label: '🐰맠묘&묘맠 선입금🐱',
+    item_label:
+      '[[nct마크 6차 재진행]]크리스마스 후드마크 증명사진 라라라라라라라라',
     item_price: 14000,
     item_date_start: '2023.11.21',
     item_date_end: '2023.12.05',
@@ -458,8 +459,11 @@ export default function Goods({ searchParams }: GoodsProps) {
 
         <div className="flex justify-between mb-5">
           <h1 className="text-xl">
-            인형 카테고리에 <span className="text-highlight">9999개</span>의
-            상품이 등록되어 있습니다.
+            인형 카테고리에{' '}
+            <span className="text-highlight">
+              {itemList.length.toLocaleString()}개
+            </span>
+            의 상품이 등록되어 있습니다.
           </h1>
 
           <nav>
