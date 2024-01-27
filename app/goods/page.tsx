@@ -103,7 +103,7 @@ const idolList = [
 
 const itemList = [
   {
-    index: 0,
+    item_id: '1',
     item_image: '/mocks/goods_rabbit.png',
     item_label: '🐰맠묘&묘맠 선입금🐱',
     item_price: 14000,
@@ -115,7 +115,7 @@ const itemList = [
     user_id: 'markmyo',
   },
   {
-    index: 1,
+    item_id: '2',
     item_image: '/mocks/goods_rabbit.png',
     item_label:
       '[[nct마크 6차 재진행]]크리스마스 후드마크 증명사진 라라라라라라라라',
@@ -128,7 +128,7 @@ const itemList = [
     user_id: 'markmyo',
   },
   {
-    index: 2,
+    item_id: '3',
     item_image: '/mocks/goods_rabbit.png',
     item_label: '🐰맠묘&묘맠 선입금🐱',
     item_price: 14000,
@@ -140,7 +140,7 @@ const itemList = [
     user_id: 'markmyo',
   },
   {
-    index: 3,
+    item_id: '4',
     item_image: '/mocks/goods_rabbit.png',
     item_label: '🐰맠묘&묘맠 선입금🐱',
     item_price: 14000,
@@ -152,7 +152,7 @@ const itemList = [
     user_id: 'markmyo',
   },
   {
-    index: 4,
+    item_id: '5',
     item_image: '/mocks/goods_rabbit.png',
     item_label: '🐰맠묘&묘맠 선입금🐱',
     item_price: 14000,
@@ -164,7 +164,7 @@ const itemList = [
     user_id: 'markmyo',
   },
   {
-    index: 5,
+    item_id: '6',
     item_image: '/mocks/goods_rabbit.png',
     item_label: '🐰맠묘&묘맠 선입금🐱',
     item_price: 14000,
@@ -176,7 +176,7 @@ const itemList = [
     user_id: 'markmyo',
   },
   {
-    index: 6,
+    item_id: '7',
     item_image: '/mocks/goods_rabbit.png',
     item_label: '🐰맠묘&묘맠 선입금🐱',
     item_price: 14000,
@@ -188,7 +188,7 @@ const itemList = [
     user_id: 'markmyo',
   },
   {
-    index: 7,
+    item_id: '8',
     item_image: '/mocks/goods_rabbit.png',
     item_label: '🐰맠묘&묘맠 선입금🐱',
     item_price: 14000,
@@ -200,7 +200,7 @@ const itemList = [
     user_id: 'markmyo',
   },
   {
-    index: 8,
+    item_id: '9',
     item_image: '/mocks/goods_rabbit.png',
     item_label: '🐰맠묘&묘맠 선입금🐱',
     item_price: 14000,
@@ -212,7 +212,7 @@ const itemList = [
     user_id: 'markmyo',
   },
   {
-    index: 9,
+    item_id: '10',
     item_image: '/mocks/goods_rabbit.png',
     item_label: '🐰맠묘&묘맠 선입금🐱',
     item_price: 14000,
@@ -224,7 +224,7 @@ const itemList = [
     user_id: 'markmyo',
   },
   {
-    index: 10,
+    item_id: '11',
     item_image: '/mocks/goods_rabbit.png',
     item_label: '🐰맠묘&묘맠 선입금🐱',
     item_price: 14000,
@@ -236,7 +236,7 @@ const itemList = [
     user_id: 'markmyo',
   },
   {
-    index: 11,
+    item_id: '12',
     item_image: '/mocks/goods_rabbit.png',
     item_label: '🐰맠묘&묘맠 선입금🐱',
     item_price: 14000,
@@ -248,7 +248,7 @@ const itemList = [
     user_id: 'markmyo',
   },
   {
-    index: 12,
+    item_id: '13',
     item_image: '/mocks/goods_rabbit.png',
     item_label: '🐰맠묘&묘맠 선입금🐱',
     item_price: 14000,
@@ -260,7 +260,7 @@ const itemList = [
     user_id: 'markmyo',
   },
   {
-    index: 13,
+    item_id: '14',
     item_image: '/mocks/goods_rabbit.png',
     item_label: '🐰맠묘&묘맠 선입금🐱',
     item_price: 14000,
@@ -272,7 +272,7 @@ const itemList = [
     user_id: 'markmyo',
   },
   {
-    index: 14,
+    item_id: '15',
     item_image: '/mocks/goods_rabbit.png',
     item_label: '🐰맠묘&묘맠 선입금🐱',
     item_price: 14000,
@@ -284,7 +284,7 @@ const itemList = [
     user_id: 'markmyo',
   },
   {
-    index: 15,
+    item_id: '16',
     item_image: '/mocks/goods_rabbit.png',
     item_label: '🐰맠묘&묘맠 선입금🐱',
     item_price: 14000,
@@ -296,7 +296,7 @@ const itemList = [
     user_id: 'markmyo',
   },
   {
-    index: 16,
+    item_id: '17',
     item_image: '/mocks/goods_rabbit.png',
     item_label: '🐰맠묘&묘맠 선입금🐱',
     item_price: 14000,
@@ -308,7 +308,7 @@ const itemList = [
     user_id: 'markmyo',
   },
   {
-    index: 17,
+    item_id: '18',
     item_image: '/mocks/goods_rabbit.png',
     item_label: '🐰맠묘&묘맠 선입금🐱',
     item_price: 14000,
@@ -320,7 +320,7 @@ const itemList = [
     user_id: 'markmyo',
   },
   {
-    index: 18,
+    item_id: '19',
     item_image: '/mocks/goods_rabbit.png',
     item_label: '🐰맠묘&묘맠 선입금🐱',
     item_price: 14000,
@@ -332,7 +332,7 @@ const itemList = [
     user_id: 'markmyo',
   },
   {
-    index: 19,
+    item_id: '20',
     item_image: '/mocks/goods_rabbit.png',
     item_label: '🐰맠묘&묘맠 선입금🐱',
     item_price: 14000,
@@ -344,7 +344,7 @@ const itemList = [
     user_id: 'markmyo',
   },
   {
-    index: 20,
+    item_id: '21',
     item_image: '/mocks/goods_rabbit.png',
     item_label: '🐰맠묘&묘맠 선입금🐱',
     item_price: 14000,
@@ -356,7 +356,7 @@ const itemList = [
     user_id: 'markmyo',
   },
   {
-    index: 21,
+    item_id: '22',
     item_image: '/mocks/goods_rabbit.png',
     item_label: '🐰맠묘&묘맠 선입금🐱',
     item_price: 14000,
@@ -368,7 +368,7 @@ const itemList = [
     user_id: 'markmyo',
   },
   {
-    index: 22,
+    item_id: '23',
     item_image: '/mocks/goods_rabbit.png',
     item_label: '🐰맠묘&묘맠 선입금🐱',
     item_price: 14000,
@@ -380,7 +380,7 @@ const itemList = [
     user_id: 'markmyo',
   },
   {
-    index: 23,
+    item_id: '24',
     item_image: '/mocks/goods_rabbit.png',
     item_label: '🐰맠묘&묘맠 선입금🐱',
     item_price: 14000,
@@ -392,7 +392,7 @@ const itemList = [
     user_id: 'markmyo',
   },
   {
-    index: 24,
+    item_id: '25',
     item_image: '/mocks/goods_rabbit.png',
     item_label: '🐰맠묘&묘맠 선입금🐱',
     item_price: 14000,
@@ -404,7 +404,7 @@ const itemList = [
     user_id: 'markmyo',
   },
   {
-    index: 25,
+    item_id: '26',
     item_image: '/mocks/goods_rabbit.png',
     item_label: '🐰맠묘&묘맠 선입금🐱',
     item_price: 14000,
@@ -509,10 +509,10 @@ export default function Goods({ searchParams }: GoodsProps) {
         </div>
       </section>
 
-      <section className="grid grid-cols-5 gap-x-3 gap-y-9">
+      <section className="grid grid-cols-5 gap-y-9">
         {itemList.map(
           ({
-            index,
+            item_id,
             item_image,
             item_label,
             item_price,
@@ -524,7 +524,7 @@ export default function Goods({ searchParams }: GoodsProps) {
             user_id,
           }) => (
             <Item
-              key={index}
+              item_id={item_id}
               item_image={item_image}
               item_label={item_label}
               item_price={item_price}
