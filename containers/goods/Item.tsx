@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardFooter, CardHeader, Button } from '@nextui-org/react';
 import { IconEyeOpen, IconHeart, IconWish } from '@/public/svgs';
+import { Views } from '@/components/common';
 
 interface ItemProps {
   item_id: string;
@@ -62,12 +63,7 @@ export default function Item({
               🗓️ {`${item_date_start}~${item_date_end}`}
             </p>
 
-            <div className="flex items-center gap-1 ">
-              <IconEyeOpen />
-              <p className="text-base text-inactive">
-                {item_view.toLocaleString()}
-              </p>
-            </div>
+            <Views viewNum={item_view} />
           </div>
 
           <div className="flex gap-2">

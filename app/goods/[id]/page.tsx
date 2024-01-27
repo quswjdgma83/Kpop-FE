@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Chip, Button } from '@nextui-org/react';
-import { GoBackButton } from '@/components/common';
+import { GoBackButton, Views } from '@/components/common';
 import { IconShare, IconArrowRight } from '@/public/svgs';
 
 const item = {
@@ -78,10 +78,11 @@ export default function GoodsDetail({
           </div>
         </section>
 
-        <section className="absolute top-0 right-0 flex flex-col gap-5">
-          <Button isIconOnly className="bg-transparent">
+        <section className="absolute top-0 right-0 flex flex-col items-end gap-6">
+          <Button isIconOnly className="bg-transparent h-6">
             <IconShare />
           </Button>
+          <Views viewNum={item.item_view} />
         </section>
       </div>
     </div>
