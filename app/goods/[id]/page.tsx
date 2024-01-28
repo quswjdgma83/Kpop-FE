@@ -93,16 +93,20 @@ export default function GoodsDetail({
           {item.artist_name}의 또 다른 굿즈!
         </p>
 
-        <div>
-          <AnohterItem
-            item_id={item.item_id}
-            item_image={item.item_image}
-            item_label={item.item_label}
-            item_price={item.item_price}
-            artist_name={item.artist_name}
-            user_avatar={item.user_avatar}
-            user_name={item.user_name}
-          />
+        <div className="grid grid-cols-6 gap-y-5">
+          {Array.from(Array(20))
+            .slice(0, 12)
+            .map((v) => (
+              <AnohterItem
+                item_id={item.item_id}
+                item_image={item.item_image}
+                item_label={item.item_label}
+                item_price={item.item_price}
+                artist_name={item.artist_name}
+                user_avatar={item.user_avatar}
+                user_name={item.user_name}
+              />
+            ))}
         </div>
       </section>
     </div>
