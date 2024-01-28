@@ -39,7 +39,7 @@ export default function Item({
           >
             <IconWish />
           </Button>
-          <Button className="bg-transparent absolute right-0 top-0" isIconOnly>
+          <Button className="absolute top-0 right-0 bg-transparent" isIconOnly>
             <IconHeart />
           </Button>
         </CardHeader>

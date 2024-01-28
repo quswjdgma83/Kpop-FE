@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Button, Chip, Input } from '@nextui-org/react';
 import { IconAdd, IconCancel, IconSearch } from '@/public/svgs';
-import Item from '@/containers/goods/Item';
+import { Item } from '@/containers/goods';
 
 interface GoodsProps {
   searchParams: { [key: string]: string | string[] | undefined };
@@ -421,7 +421,7 @@ export default function Goods({ searchParams }: GoodsProps) {
   return (
     <div className="w-full">
       <section className="mb-9">
-        <div className="flex flex-col gap-10 justify-center bg-black py-10 mb-8">
+        <div className="flex flex-col justify-center py-10 mb-8 bg-black gap-10">
           <Input
             size="sm"
             radius="none"

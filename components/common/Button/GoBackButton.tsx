@@ -12,7 +12,7 @@ export default function GoBackButton() {
   return (
     <Button
       startContent={<IconArrowLeft />}
-      className="bg-transparent text-white text-base p-0"
+      className="p-0 text-base text-white bg-transparent"
       onClick={onClick}
     >
       뒤로가기

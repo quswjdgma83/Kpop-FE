@@ -1,7 +1,9 @@
 import Image from 'next/image';
-import { Chip, Button } from '@nextui-org/react';
+import Link from 'next/link';
+import { Chip, Button, Card } from '@nextui-org/react';
 import { GoBackButton, Views } from '@/components/common';
 import { IconShare, IconArrowRight } from '@/public/svgs';
+import AnohterItem from '@/containers/goods/AnotherItem';
 
 const item = {
   item_id: '1',
@@ -32,7 +34,7 @@ export default function GoodsDetail({
         <GoBackButton />
       </nav>
 
-      <div className="flex gap-8 relative">
+      <section className="relative flex gap-8">
         <Image
           src={item.item_image}
           width={500}
@@ -41,9 +43,9 @@ export default function GoodsDetail({
           className="rounded-2xl object-cover w-[500px] h-[415px]"
         />
 
-        <section className="w-full flex flex-col justify-between">
+        <section className="flex flex-col justify-between w-full">
           <div className="flex flex-col gap-5">
-            <div className="flex gap-6 items-center">
+            <div className="flex items-center gap-6">
               <Chip variant="bordered" className="text-white">
                 {item.item_category}
               </Chip>
@@ -57,7 +59,7 @@ export default function GoodsDetail({
               {item.item_label}
             </p>
             <p className="w-[450px] line-clamp-3">{item.item_description}</p>
-            <p className="text-highlight text-xl">
+            <p className="text-xl text-highlight">
               {item.item_price.toLocaleString()}원
             </p>
             <p>
@@ -79,12 +81,30 @@ export default function GoodsDetail({
         </section>
 
         <section className="absolute top-0 right-0 flex flex-col items-end gap-6">
-          <Button isIconOnly className="bg-transparent h-6">
+          <Button isIconOnly className="h-6 bg-transparent">
             <IconShare />
           </Button>
           <Views viewNum={item.item_view} />
         </section>
-      </div>
+      </section>
+
+      <section className="mt-[200px] flex flex-col gap-8">
+        <p className="font-semibold text-[22px]">
+          {item.artist_name}의 또 다른 굿즈!
+        </p>
+
+        <div>
+          <AnohterItem
+            item_id={item.item_id}
+            item_image={item.item_image}
+            item_label={item.item_label}
+            item_price={item.item_price}
+            artist_name={item.artist_name}
+            user_avatar={item.user_avatar}
+            user_name={item.user_name}
+          />
+        </div>
+      </section>
     </div>
   );
 }
