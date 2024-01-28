@@ -10,9 +10,9 @@ export default function IconArrowLeft() {
       <path
         d="M15.375 5.7373L8.625 12.4873L15.375 19.2373"
         stroke="white"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
