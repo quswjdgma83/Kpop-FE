@@ -4,8 +4,8 @@ import { useState } from 'react';
 import { Input } from '@nextui-org/react';
 import EventCard from '@/containers/events/EventCard';
 import { KakaoMap } from '@/components';
-import IconUpArrow from '@/public/svgs/arrow_up';
-import IconDownArrow from '@/public/svgs/arrow_down';
+import IconUpArrow from '@/public/svgs/ArrowUp';
+import IconDownArrow from '@/public/svgs/ArrowDown';
 import AccordionMenu from '@/containers/events/AccordionMenu';
 
 export default function Events() {
