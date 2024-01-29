@@ -1,5 +1,5 @@
-import type { Config } from 'tailwindcss'
-const {nextui} = require("@nextui-org/theme");
+import type { Config } from 'tailwindcss';
+const { nextui } = require('@nextui-org/theme');
 
 const config: Config = {
   content: [
@@ -16,13 +16,13 @@ const config: Config = {
         inactive: 'rgba(255, 255, 255, 0.58)',
       },
       width: {
-        desktop: '1280px'
+        desktop: '1280px',
       },
       minWidth: {
-        desktop: '1280px'
-      }
+        desktop: '1280px',
+      },
     },
   },
-  plugins: [nextui()],
-}
-export default config
+  plugins: [nextui(), require('tailwind-scrollbar-hide')],
+};
+export default config;
