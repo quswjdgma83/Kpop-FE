@@ -1,11 +1,12 @@
 'use client';
 import { useState } from 'react';
 
-import { AccordionMenu, KakaoMap } from '@/components';
 import { Input } from '@nextui-org/react';
 import EventCard from '@/containers/events/EventCard';
+import { KakaoMap } from '@/components';
 import IconUpArrow from '@/public/svgs/arrow_up';
 import IconDownArrow from '@/public/svgs/arrow_down';
+import AccordionMenu from '@/containers/events/AccordionMenu';
 
 export default function Events() {
   const [isOpen, setIsOpen] = useState(false);
@@ -149,27 +150,34 @@ export default function Events() {
           <AccordionMenu list={agencies} isOpen={isOpen} />
           <AccordionMenu list={idol_list} isOpen={isOpen} />
 
-          <div className="flex flex-row w-[376px] gap-4">
-            <Input
-              type="text"
-              className="h-[46px] w-[105px] py-0 text-sm text-basic mb-5 flex-shrink-0 rounded-[8px] bg-default-black border border-solid border-[#5ed0ff]"
-              size="sm"
-              placeholder="년"
-            />
-            <Input
-              type="text"
-              className="h-[46px] w-[105px] py-0 text-sm text-basic mb-5 flex-shrink-0 rounded-[8px] bg-gray-100 border border-solid border-[#5ed0ff]"
-              size="sm"
-              placeholder="월"
-            />
-            <Input
-              type="text"
-              className="h-[46px] w-[105px] py-0 text-sm text-basic mb-5 flex-shrink-0 rounded-[8px] bg-[#3B3B3B] border border-solid border-[#5ed0ff]"
-              size="sm"
-              placeholder="일"
-            />
-          </div>
-          <div className="flex flex-col items-center">
+          {isOpen && (
+            <div className="flex flex-row w-[376px] h-[48px] gap-4 z-999">
+              <Input
+                key="default"
+                type="text"
+                className="h-[50px] w-[105px] py-0 text-sm text-basic mb-5 rounded-[8px] border border-solid border-[#5ed0ff]"
+                classNames={{ inputWrapper: 'bg-background' }}
+                color="default"
+                size="sm"
+                placeholder="년"
+              />
+              <Input
+                type="text"
+                className="h-[50px] w-[105px] py-0 text-sm text-basic mb-5 flex-shrink-0 rounded-[8px] bg-background/80 border border-solid border-[#5ed0ff]"
+                classNames={{ inputWrapper: 'bg-background' }}
+                size="sm"
+                placeholder="월"
+              />
+              <Input
+                type="text"
+                className="h-[50px] w-[105px] py-0 text-sm text-basic mb-5 flex-shrink-0 rounded-[8px] bg-background/80 border border-solid border-[#5ed0ff]"
+                classNames={{ inputWrapper: 'bg-background' }}
+                size="sm"
+                placeholder="일"
+              />
+            </div>
+          )}
+          <div className="flex flex-col w-[346px] items-center mt-5">
             <button onClick={handleToggleAccordion}>
               {isOpen ? (
                 <div className="flex flex-col items-center mb-2">

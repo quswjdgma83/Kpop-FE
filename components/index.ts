@@ -1,2 +1,1 @@
-export { default as AccordionMenu } from './event/AccordionMenu/AccordionMenu';
-export { default as KakaoMap } from './common/KakaoMap/KakaoMap';
+export { default as KakaoMap } from './map/KakaoMap/KakaoMap';
