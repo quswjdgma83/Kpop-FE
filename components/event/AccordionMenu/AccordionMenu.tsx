@@ -8,15 +8,13 @@ interface AccordionMenuProps {
   isOpen?: boolean;
 }
 
-const AccordionMenu: React.FC<AccordionMenuProps> = ({
-  list,
-  isOpen: propIsOpen,
-}) => {
+const AccordionMenu: React.FC<AccordionMenuProps> = ({ list, isOpen }) => {
   const [selectedItem, setSelectedItem] = useState<string | null>(null);
 
   const handleItemClick = (item: string) => {
     setSelectedItem(item);
   };
+  console.log(selectedItem);
 
   return (
     <div className="w-[346px] mb-4">
@@ -26,7 +24,7 @@ const AccordionMenu: React.FC<AccordionMenuProps> = ({
           className="flex items-center w-[326px] h-[48px] pl-[16px] pr-[24px] py-[8px] rounded-[8px] overflow-hidden border border-solid border-[#5ed0ff]"
           // onClick={}
         >
-          {list[0]}
+          {selectedItem ?? list[0]}
         </button>
         {isOpen &&
           list.map((item) => (
