@@ -7,6 +7,9 @@ import IconWish from './Wish';
 import IconArrowLeft from './ArrowLeft';
 import IconShare from './Share';
 import IconArrowRight from './ArrowRight';
+import IconArrowDown from './ArrowDown';
+import IconArrowUp from './ArrowUp';
+import IconChecked from './checked';
 
 export {
   IconAdd,
@@ -18,4 +21,7 @@ export {
   IconArrowLeft,
   IconShare,
   IconArrowRight,
+  IconArrowDown,
+  IconArrowUp,
+  IconChecked,
 };
