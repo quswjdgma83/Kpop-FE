@@ -9,7 +9,7 @@ import IconShare from './Share';
 import IconArrowRight from './ArrowRight';
 import IconArrowDown from './ArrowDown';
 import IconArrowUp from './ArrowUp';
-import IconChecked from './checked';
+import IconChecked from './Checked';
 
 export {
   IconAdd,
