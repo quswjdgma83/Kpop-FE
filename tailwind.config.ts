@@ -14,9 +14,8 @@ const config: Config = {
       colors: {
         background: '#191919',
         component: '#232323',
-        highlight: '#1FFBFB',
+        highlight: '#5ED0FF',
         inactive: 'rgba(255, 255, 255, 0.58)',
-        button: '#5ED0FF',
       },
       width: {
         desktop: '1280px'

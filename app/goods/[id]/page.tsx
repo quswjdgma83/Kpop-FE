@@ -68,12 +68,12 @@ export default function GoodsDetail({
           </div>
 
           <div className="flex gap-6">
-            <Button className="w-60 h-[50px] bg-button text-white rounded-lg font-medium text-base">
+            <Button className="w-60 h-[50px] bg-highlight text-white rounded-lg font-medium text-base">
               구매하러 가기
             </Button>
             <Button
               variant="bordered"
-              className="w-60 h-[50px] border-button text-white rounded-lg font-medium text-base"
+              className="w-60 h-[50px] border-highlight text-white rounded-lg font-medium text-base"
             >
               좋아요
             </Button>
