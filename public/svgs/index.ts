@@ -1,11 +1,7 @@
-import IconAdd from './add';
-import IconCancel from './cancel';
-import IconEyeOpen from './eye_open';
-import IconHeart from './heart';
+import IconAdd from './Add';
+import IconCancel from './Cancel';
+import IconEyeOpen from './EyeOpen';
+import IconHeart from './Heart';
+import IconChecked from './Checked';
 
-export {
-  IconAdd,
-  IconCancel,
-  IconEyeOpen,
-  IconHeart
-}
+export { IconAdd, IconCancel, IconEyeOpen, IconHeart, IconChecked };
