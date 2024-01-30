@@ -2,8 +2,7 @@ import type { Metadata } from 'next';
 import { Providers } from './providers';
 import '@/styles/globals.css';
 import { inter } from '../public/fonts/fonts';
-import Header from '@/components/common/Header';
-import Footer from '@/components/common/Footer';
+import { Header, Footer } from '@/components/common';
 
 export const metadata: Metadata = {
   title: 'K-POP Goods',
@@ -16,10 +15,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko">
-      <body
-        className={`${inter.variable} bg-background text-white h-full min-h-screen `}
-      >
+    <html lang="ko" className="bg-background">
+      <body className={`${inter.variable} text-white h-full min-h-screen `}>
         <Providers>
           <Header />
           <main className="h-full mx-auto mt-10 w-desktop">{children}</main>

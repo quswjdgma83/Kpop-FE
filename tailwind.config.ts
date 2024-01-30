@@ -5,6 +5,7 @@ const config: Config = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './containers/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
   ],
@@ -12,7 +13,8 @@ const config: Config = {
     extend: {
       colors: {
         background: '#191919',
-        highlight: '#1FFBFB',
+        component: '#232323',
+        highlight: '#5ED0FF',
         inactive: 'rgba(255, 255, 255, 0.58)',
       },
       width: {
