@@ -1,3 +1,4 @@
+import Slider from 'react-slick';
 import CircleItem from './common';
 
 const agencyItems = [
