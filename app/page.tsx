@@ -1,4 +1,4 @@
-import { Banner } from '@/containers/home';
+import { Banner, AgencyList } from '@/containers/home';
 
 export default function Home() {
   return (
@@ -10,6 +10,10 @@ export default function Home() {
       <h2 className="font-semibold text-3xl">
         K-Goods에서는 모든 아티스트의 굿즈 정보를 수집하고 있어요
       </h2>
+
+      <div className="overflow-hidden p-1">
+        <AgencyList />
+      </div>
     </div>
   );
 }
