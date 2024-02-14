@@ -11,7 +11,7 @@ export default function Home() {
         K-Goods에서는 모든 아티스트의 굿즈 정보를 수집하고 있어요
       </h2>
 
-      <div className="overflow-hidden p-1">
+      <div>
         <AgencyList />
       </div>
     </div>

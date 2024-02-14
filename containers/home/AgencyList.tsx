@@ -1,3 +1,5 @@
+'use client';
+
 import Slider from 'react-slick';
 import CircleItem from './common';
 
@@ -30,26 +32,26 @@ const agencyItems = [
     agencyName: 'PLEDIS',
     agencyLogo: '/mocks/agency_pledis.png',
   },
-  {
-    agencyName: 'PLEDIS',
-    agencyLogo: '/mocks/agency_pledis.png',
-  },
-  {
-    agencyName: 'PLEDIS',
-    agencyLogo: '/mocks/agency_pledis.png',
-  },
-  {
-    agencyName: 'PLEDIS',
-    agencyLogo: '/mocks/agency_pledis.png',
-  },
 ];
 
 export default function AgencyList() {
+  const carouselSettings = {
+    arrows: false,
+    dots: false,
+    slidesToScroll: 1,
+    swipeToSlide: true,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
+    variableWidth: true,
+  };
+
   return (
-    <section className="flex gap-10">
+    <Slider {...carouselSettings}>
       {agencyItems.map(({ agencyLogo, agencyName }) => (
-        <CircleItem logo={agencyLogo} label={agencyName} />
+        <CircleItem logo={agencyLogo} label={agencyName} key={agencyName} />
       ))}
-    </section>
+    </Slider>
   );
 }
