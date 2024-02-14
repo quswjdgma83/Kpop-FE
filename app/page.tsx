@@ -1,4 +1,4 @@
-import { Banner, AgencyList } from '@/containers/home';
+import { Banner, AgencyList, ArtistList } from '@/containers/home';
 
 export default function Home() {
   return (
@@ -11,8 +11,9 @@ export default function Home() {
         K-Goods에서는 모든 아티스트의 굿즈 정보를 수집하고 있어요
       </h2>
 
-      <div>
+      <div className="flex flex-col gap-7">
         <AgencyList />
+        <ArtistList />
       </div>
     </div>
   );
