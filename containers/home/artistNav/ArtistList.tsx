@@ -1,7 +1,7 @@
 'use client';
 
 import Slider from 'react-slick';
-import CircleItem from './common';
+import CircleItem from './CircleItem';
 
 const artistItems = [
   {
