@@ -22,7 +22,7 @@ export default function AnohterItem({
   user_avatar,
 }: AnotherItemProps) {
   return (
-    <Link href="#">
+    <Link href="#" className="group">
       <Card className="w-[200px] h-[200px] relative" radius="sm" isHoverable>
         <Image
           src={item_image}
@@ -32,7 +32,7 @@ export default function AnohterItem({
           className="object-cover w-full h-full hover:-z-10"
         />
 
-        <CardFooter className="absolute flex flex-col items-start text-white pt-28 bottom hover:bg-black hover:bg-opacity-50 ">
+        <CardFooter className="absolute group-hover:flex flex-col items-start text-white pt-28 bottom bg-black bg-opacity-50 hidden">
           <p className="text-lg font-bold text-highlight">
             {item_price.toLocaleString()}원
           </p>
