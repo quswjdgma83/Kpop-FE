@@ -10,6 +10,7 @@ import IconArrowRight from './ArrowRight';
 import IconArrowDown from './ArrowDown';
 import IconArrowUp from './ArrowUp';
 import IconChecked from './Checked';
+import IconParticipant from './Participant';
 
 export {
   IconAdd,
@@ -24,4 +25,5 @@ export {
   IconArrowDown,
   IconArrowUp,
   IconChecked,
+  IconParticipant,
 };

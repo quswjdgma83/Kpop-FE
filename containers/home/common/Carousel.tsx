@@ -1,5 +1,10 @@
 import Slider from 'react-slick';
 
+interface CarouselProps {
+  height: string;
+  children: React.ReactNode;
+}
+
 const carouselSettings = {
   // className: 'flex items-center flex-nowrap',
   variableWidth: true,
@@ -8,9 +13,9 @@ const carouselSettings = {
   slidesToScroll: 1,
 };
 
-export default function Carousel({ children }: { children: React.ReactNode }) {
+export default function Carousel({ height, children }: CarouselProps) {
   return (
-    <Slider {...carouselSettings} className="h-[530px]">
+    <Slider {...carouselSettings} className={height}>
       {children}
     </Slider>
   );

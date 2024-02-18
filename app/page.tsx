@@ -1,6 +1,12 @@
 'use client';
 
-import { Banner, AgencyList, ArtistList, GoodsItem } from '@/containers/home';
+import {
+  Banner,
+  AgencyList,
+  ArtistList,
+  GoodsItem,
+  SocialItem,
+} from '@/containers/home';
 import Carousel from '@/containers/home/common/Carousel';
 import { itemList } from './goods/page';
 
@@ -27,7 +33,7 @@ export default function Home() {
           내가 선택한 아티스트 굿즈 정보를 확인해보세요!
         </h2>
 
-        <Carousel>
+        <Carousel height="530px">
           {itemList.map(
             ({
               item_id,
@@ -55,6 +61,21 @@ export default function Home() {
               />
             ),
           )}
+        </Carousel>
+      </div>
+
+      <div className="flex flex-col gap-7">
+        <h2 className="font-semibold text-3xl">
+          지금 0000에서 가장 인기있는 NCT소모임!🔥
+        </h2>
+
+        <Carousel height="200px">
+          <SocialItem />
+          <SocialItem />
+          <SocialItem />
+          <SocialItem />
+          <SocialItem />
+          <SocialItem />
         </Carousel>
       </div>
     </div>
