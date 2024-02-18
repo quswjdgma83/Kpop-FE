@@ -1,13 +1,17 @@
 import Slider from 'react-slick';
 
 const carouselSettings = {
-  dots: true,
-  infinite: true,
+  // className: 'flex items-center flex-nowrap',
+  variableWidth: true,
+  infinite: false,
   speed: 500,
-  slidesToShow: 1,
   slidesToScroll: 1,
 };
 
 export default function Carousel({ children }: { children: React.ReactNode }) {
-  return <Slider {...carouselSettings}>{children}</Slider>;
+  return (
+    <Slider {...carouselSettings} className="h-[530px]">
+      {children}
+    </Slider>
+  );
 }

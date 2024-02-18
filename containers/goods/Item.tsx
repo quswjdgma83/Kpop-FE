@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardFooter, CardHeader, Button } from '@nextui-org/react';
-import { IconEyeOpen, IconHeart, IconWish } from '@/public/svgs';
+import { IconHeart, IconWish } from '@/public/svgs';
 import { Views } from '@/components/common';
 
 interface ItemProps {

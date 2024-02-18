@@ -101,7 +101,7 @@ const idolList = [
   },
 ];
 
-const itemList = [
+export const itemList = [
   {
     item_id: '1',
     item_image: '/mocks/goods_rabbit.png',
