@@ -1,13 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import {
-  Card,
-  CardFooter,
-  CardHeader,
-  CardBody,
-  Button,
-  Avatar,
-} from '@nextui-org/react';
+import { Card, Avatar } from '@nextui-org/react';
 import { IconParticipant } from '@/public/svgs';
 
 export default function SocialItem() {

@@ -10,7 +10,7 @@ import {
 import { IconHeart, IconWish } from '@/public/svgs';
 import { Views } from '@/components/common';
 
-interface ItemProps {
+interface GoodsItemProps {
   item_id: string;
   item_image: string;
   item_label: string;
@@ -34,10 +34,10 @@ export default function GoodsItem({
   user_avatar,
   user_name,
   user_id,
-}: ItemProps) {
+}: GoodsItemProps) {
   return (
     <Link href={`goods/${item_id}`} className="flex mr-4">
-      <Card className="w-[400px] h-[530px] relative text-white">
+      <Card className="w-[400px] h-[530px] relative text-white rounded-3xl">
         <CardHeader className="absolute top-0">
           <Button
             className="bg-transparent absolute -top-[6px] -left-[3px]"
@@ -50,7 +50,7 @@ export default function GoodsItem({
         <Image
           src={item_image}
           alt="굿즈 이미지"
-          width={408}
+          width={400}
           height={530}
           className="object-cover"
         />

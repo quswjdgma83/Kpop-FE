@@ -6,6 +6,7 @@ import {
   ArtistList,
   GoodsItem,
   SocialItem,
+  EventItem,
 } from '@/containers/home';
 import Carousel from '@/containers/home/common/Carousel';
 import { itemList } from './goods/page';
@@ -76,6 +77,21 @@ export default function Home() {
           <SocialItem />
           <SocialItem />
           <SocialItem />
+        </Carousel>
+      </div>
+
+      <div className="flex flex-col gap-7">
+        <h2 className="font-semibold text-3xl">
+          12월 1주차 NCT 팝업 및 이벤트 🎉
+        </h2>
+
+        <Carousel height="530px">
+          <EventItem />
+          <EventItem />
+          <EventItem />
+          <EventItem />
+          <EventItem />
+          <EventItem />
         </Carousel>
       </div>
     </div>
