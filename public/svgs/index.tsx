@@ -10,6 +10,11 @@ import IconArrowRight from './ArrowRight';
 import IconArrowDown from './ArrowDown';
 import IconArrowUp from './ArrowUp';
 import IconChecked from './Checked';
+import IconFlash from './Flash';
+import IconFlag from './Flag';
+import IconInformation from './Information';
+import IconLamp from './Lamp';
+import IconSend from './Send';
 
 export {
   IconAdd,
@@ -24,4 +29,9 @@ export {
   IconArrowDown,
   IconArrowUp,
   IconChecked,
+  IconFlash,
+  IconFlag,
+  IconInformation,
+  IconLamp,
+  IconSend,
 };
