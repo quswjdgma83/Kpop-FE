@@ -113,6 +113,14 @@ export default function Home() {
 
         <PopularGoods />
       </div>
+
+      <div className="flex flex-col gap-7">
+        <h2 className="font-semibold text-3xl">
+          방탄소년단의 12월 이벤트 및 팝업 정보{' '}
+        </h2>
+
+        <Banner />
+      </div>
     </div>
   );
 }
