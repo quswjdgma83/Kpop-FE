@@ -51,6 +51,7 @@ export default function Home() {
               user_id,
             }) => (
               <GoodsItem
+                key={item_id}
                 item_id={item_id}
                 item_image={item_image}
                 item_label={item_label}

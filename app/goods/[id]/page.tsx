@@ -105,6 +105,7 @@ export default function GoodsDetail({
                 artist_name={item.artist_name}
                 user_avatar={item.user_avatar}
                 user_name={item.user_name}
+                size={200}
               />
             ))}
         </div>

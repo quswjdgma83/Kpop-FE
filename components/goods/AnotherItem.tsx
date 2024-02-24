@@ -10,6 +10,7 @@ interface AnotherItemProps {
   artist_name: string;
   user_name: string;
   user_avatar: string;
+  size: number;
 }
 
 export default function AnotherItem({
@@ -20,35 +21,46 @@ export default function AnotherItem({
   artist_name,
   user_name,
   user_avatar,
+  size,
 }: AnotherItemProps) {
   return (
     <Link href="#" className="group">
-      <Card className="w-[200px] h-[200px] relative" radius="sm" isHoverable>
+      <Card
+        className={`w-[${size}px] h-[${size}px] relative`}
+        radius="sm"
+        isHoverable
+      >
         <Image
           src={item_image}
-          width={200}
-          height={200}
+          width={size}
+          height={size}
           alt={`${artist_name}의 굿즈 ${item_label} 이미지`}
-          className="object-cover w-full h-full hover:-z-10"
+          className={`object-cover w-[${size}px] h-[${size}px]`}
         />
 
-        <CardFooter className="absolute group-hover:flex flex-col items-start text-white pt-28 bottom bg-black bg-opacity-50 hidden">
-          <p className="text-lg font-bold text-highlight">
-            {item_price.toLocaleString()}원
-          </p>
-          <p className="text-base font-semibold truncate w-[180px]">
-            {item_label}
-          </p>
-          <div className="flex items-center gap-2">
-            <Image
-              src={user_avatar}
-              width={22}
-              height={22}
-              alt={`${user_name}의 아바타 이미지`}
-            />
-            <span className="text-base font-semibold truncate w-[160px]">
-              {user_name}
-            </span>
+        <CardFooter className="absolute group-hover:flex items-end text-white bg-black bg-opacity-50 hidden h-full">
+          <div>
+            <p className="text-lg font-bold text-highlight">
+              {item_price.toLocaleString()}원
+            </p>
+            <p
+              className={`text-base font-semibold truncate w-[${size - 20}px]`}
+            >
+              {item_label}
+            </p>
+            <div className="flex items-center gap-2">
+              <Image
+                src={user_avatar}
+                width={22}
+                height={22}
+                alt={`${user_name}의 아바타 이미지`}
+              />
+              <span
+                className={`text-base font-semibold truncate w-[${size - 40}px]`}
+              >
+                {user_name}
+              </span>
+            </div>
           </div>
         </CardFooter>
       </Card>

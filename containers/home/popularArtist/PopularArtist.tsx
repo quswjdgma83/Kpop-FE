@@ -64,7 +64,7 @@ export default function PopularArtist() {
 
       <div className="grid grid-cols-2 grid-rows-3 grid-flow-col w-[840px] gap-x-[130px] gap-y-5">
         {rankItems.map((item) => (
-          <RankItem {...item} />
+          <RankItem key={item.rank} {...item} />
         ))}
       </div>
     </section>
