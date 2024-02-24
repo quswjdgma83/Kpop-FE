@@ -11,7 +11,19 @@ import {
   PopularGoods,
 } from '@/containers/home';
 import Carousel from '@/containers/home/common/Carousel';
-import { itemList } from './goods/page';
+
+const item = {
+  item_id: '1',
+  item_image: '/mocks/goods_rabbit.png',
+  item_label: '🐰맠묘&묘맠 선입금🐱',
+  item_price: 14000,
+  item_date_start: '2023.11.21',
+  item_date_end: '2023.12.05',
+  item_view: 999999,
+  user_avatar: '/mocks/user_avatar.png',
+  user_name: '맠묘',
+  user_id: 'markmyo',
+};
 
 export default function Home() {
   return (
@@ -37,34 +49,23 @@ export default function Home() {
         </h2>
 
         <Carousel height="530px">
-          {itemList.map(
-            ({
-              item_id,
-              item_image,
-              item_label,
-              item_price,
-              item_date_start,
-              item_date_end,
-              item_view,
-              user_avatar,
-              user_name,
-              user_id,
-            }) => (
+          {Array.from(Array(20))
+            .slice(0, 12)
+            .map((v) => (
               <GoodsItem
-                key={item_id}
-                item_id={item_id}
-                item_image={item_image}
-                item_label={item_label}
-                item_price={item_price}
-                item_date_start={item_date_start}
-                item_date_end={item_date_end}
-                item_view={item_view}
-                user_avatar={user_avatar}
-                user_name={user_name}
-                user_id={user_id}
+                key={item.item_id}
+                item_id={item.item_id}
+                item_image={item.item_image}
+                item_label={item.item_label}
+                item_price={item.item_price}
+                item_date_start={item.item_date_start}
+                item_date_end={item.item_date_end}
+                item_view={item.item_view}
+                user_avatar={item.user_avatar}
+                user_name={item.user_name}
+                user_id={item.user_id}
               />
-            ),
-          )}
+            ))}
         </Carousel>
       </div>
 
