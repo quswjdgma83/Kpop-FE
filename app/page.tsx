@@ -7,6 +7,7 @@ import {
   GoodsItem,
   SocialItem,
   EventItem,
+  PopularArtist,
 } from '@/containers/home';
 import Carousel from '@/containers/home/common/Carousel';
 import { itemList } from './goods/page';
@@ -93,6 +94,14 @@ export default function Home() {
           <EventItem />
           <EventItem />
         </Carousel>
+      </div>
+
+      <div className="flex flex-col gap-7">
+        <h2 className="font-semibold text-3xl">
+          11월 한달 가장 인기 있는 아티스트🎙️
+        </h2>
+
+        <PopularArtist />
       </div>
     </div>
   );
