@@ -8,13 +8,14 @@ import {
   SocialItem,
   EventItem,
   PopularArtist,
+  PopularGoods,
 } from '@/containers/home';
 import Carousel from '@/containers/home/common/Carousel';
 import { itemList } from './goods/page';
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-12">
+    <div className="flex flex-col gap-20">
       <div>
         <Banner />
       </div>
@@ -102,6 +103,14 @@ export default function Home() {
         </h2>
 
         <PopularArtist />
+      </div>
+
+      <div className="flex flex-col gap-7">
+        <h2 className="font-semibold text-3xl">
+          지금 가장 인기있는 NCT 굿즈🔥
+        </h2>
+
+        <PopularGoods />
       </div>
     </div>
   );

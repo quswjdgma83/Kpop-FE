@@ -12,7 +12,7 @@ interface AnotherItemProps {
   user_avatar: string;
 }
 
-export default function AnohterItem({
+export default function AnotherItem({
   item_id,
   item_image,
   item_label,
