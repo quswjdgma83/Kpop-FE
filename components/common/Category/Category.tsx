@@ -26,7 +26,7 @@ export default function Category({
         endContent={<IconSearch />}
         className="h-9 w-[440px] p-0 mx-auto"
       />
-      <nav className="flex justify-between px-4">
+      <nav className="flex gap-5 justify-center px-4">
         {categoryList.map(({ label, category }) => {
           const borderColor =
             searchParams?.category === category
