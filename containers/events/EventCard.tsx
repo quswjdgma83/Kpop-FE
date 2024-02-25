@@ -4,15 +4,14 @@ import { Card, CardFooter, CardHeader, Button } from '@nextui-org/react';
 import { IconEyeOpen, IconHeart } from '@/public/svgs';
 
 interface EventCardProps {
-  placeId: number;
-  placeCategoryCode: number;
-  latitude: number;
-  longitude: number;
+  eventId: number;
+  eventCategoryCd: number;
+  latitude?: number | null;
+  longitude?: number | null;
   placeName: string;
-  placeAddress: string;
-  placeImg: string;
-  placeContent: string;
-  placeFollowerCount: number;
+  streetAddress: string;
+  placeContent?: string;
+  placeFollowerCount?: number;
   startDate: string;
   endDate: string;
   artistId: number;
@@ -20,13 +19,12 @@ interface EventCardProps {
 }
 
 export default function EventCard({
-  placeId,
-  placeCategoryCode,
+  eventId,
+  eventCategoryCd,
   latitude,
   longitude,
   placeName,
-  placeAddress,
-  placeImg,
+  streetAddress,
   placeContent,
   placeFollowerCount,
   startDate,
@@ -35,7 +33,7 @@ export default function EventCard({
   agencyId,
 }: EventCardProps) {
   return (
-    <Link href={`events/${placeId}`}>
+    <Link href={`events/${eventId}`}>
       <Card
         className="w-[346px] h-[400px] relative rounded-lg mb-5"
         isPressable
