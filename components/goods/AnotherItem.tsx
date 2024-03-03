@@ -24,7 +24,7 @@ export default function AnotherItem({
   size,
 }: AnotherItemProps) {
   return (
-    <Link href="#" className="group">
+    <Link href={`/goods/${item_id}`} className="flex group">
       <Card
         className={`w-[${size}px] h-[${size}px] relative`}
         radius="sm"
@@ -35,10 +35,11 @@ export default function AnotherItem({
           width={size}
           height={size}
           alt={`${artist_name}의 굿즈 ${item_label} 이미지`}
+          priority
           className={`object-cover w-[${size}px] h-[${size}px]`}
         />
 
-        <CardFooter className="absolute items-end hidden h-full text-white bg-black group-hover:flex bg-opacity-50">
+        <CardFooter className="absolute items-end hidden h-full text-white bg-black bg-opacity-50 group-hover:flex">
           <div>
             <p className="text-lg font-bold text-highlight">
               {item_price.toLocaleString()}원

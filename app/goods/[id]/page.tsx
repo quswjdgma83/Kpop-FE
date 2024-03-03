@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { Chip, Button, Card } from '@nextui-org/react';
 import { GoBackButton, Views } from '@/components/common';
 import { IconShare, IconArrowRight } from '@/public/svgs';
