@@ -1,10 +1,16 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Card, CardFooter, CardHeader, Button } from '@nextui-org/react';
+import {
+  Card,
+  CardFooter,
+  CardHeader,
+  CardBody,
+  Button,
+} from '@nextui-org/react';
 import { IconHeart, IconWish } from '@/public/svgs';
 import { Views } from '@/components/common';
 
-interface ItemProps {
+interface GoodsItemProps {
   item_id: string;
   item_image: string;
   item_label: string;
@@ -17,7 +23,7 @@ interface ItemProps {
   user_id: string;
 }
 
-export default function Item({
+export default function GoodsItem({
   item_id,
   item_image,
   item_label,
@@ -28,10 +34,10 @@ export default function Item({
   user_avatar,
   user_name,
   user_id,
-}: ItemProps) {
+}: GoodsItemProps) {
   return (
-    <Link href={`goods/${item_id}`}>
-      <Card className="w-[240px] h-[350px] relative text-white">
+    <Link href={`goods/${item_id}`} className="flex mr-4">
+      <Card className="w-[400px] h-[530px] relative text-white rounded-3xl">
         <CardHeader className="absolute top-0">
           <Button
             className="bg-transparent absolute -top-[6px] -left-[3px]"
@@ -39,37 +45,47 @@ export default function Item({
           >
             <IconWish />
           </Button>
-          <Button className="absolute top-0 right-0 bg-transparent" isIconOnly>
-            <IconHeart />
-          </Button>
         </CardHeader>
 
         <Image
           src={item_image}
           alt="굿즈 이미지"
-          width={240}
-          height={350}
+          width={400}
+          height={530}
           className="object-cover"
         />
 
-        <CardFooter className="absolute bottom-0 h-[190px] flex flex-col items-start justify-between gap-2 shadow-large bg-black ">
-          <div className="flex flex-col items-start">
+        <CardBody className="absolute bottom-16 h-[160px] flex flex-col justify-between shadow-[inset_0_-160px_100px_0px_rgba(0,0,0,0.5)]">
+          <div className="flex flex-col items-start text-xl font-bold">
             <p className="text-highlight">{item_price.toLocaleString()}원</p>
             <p className="line-clamp-2">{item_label}</p>
           </div>
 
-          <div>
+          <div className="flex justify-between items-center w-full">
             <p className="text-base">
               🗓️ {`${item_date_start}~${item_date_end}`}
             </p>
 
             <Views viewNum={item_view} />
           </div>
+        </CardBody>
 
-          <div className="flex gap-2">
-            <Image src={user_avatar} width={26} height={26} alt="유저 아바타" />
-            <p className="text-xl">{user_name}</p>
-            <p className="text-base text-inactive">@{user_id}</p>
+        <CardFooter className="absolute bottom-0 h-16 flex items-center justify-between bg-black ">
+          <div className="flex items-center justify-between w-full">
+            <div className="flex gap-2">
+              <Image
+                src={user_avatar}
+                width={26}
+                height={26}
+                alt="유저 아바타"
+              />
+              <p className="text-xl">{user_name}</p>
+              <p className="text-base text-inactive">@{user_id}</p>
+            </div>
+
+            <Button className=" bg-transparent" isIconOnly>
+              <IconHeart />
+            </Button>
           </div>
         </CardFooter>
       </Card>

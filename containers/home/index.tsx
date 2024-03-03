@@ -1,3 +1,7 @@
-export { default as Banner } from './Banner';
-export { default as AgencyList } from './AgencyList';
-export { default as ArtistList } from './ArtistList';
+export * from './artistNav';
+export { default as Banner } from './banner';
+export { default as GoodsItem } from './goods';
+export { default as SocialItem } from './social';
+export { default as EventItem } from './events';
+export { default as PopularArtist } from './popularArtist';
+export { default as PopularGoods } from './popularGoods';
