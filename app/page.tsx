@@ -5,11 +5,11 @@ import {
   AgencyList,
   ArtistList,
   GoodsItem,
-  SocialItem,
   EventItem,
   PopularArtist,
   PopularGoods,
 } from '@/containers/home';
+import SocialItem from '@/components/social';
 import Carousel from '@/containers/home/common/Carousel';
 
 const item = {
@@ -33,7 +33,7 @@ export default function Home() {
       </div>
 
       <div>
-        <h2 className="font-semibold text-3xl">
+        <h2 className="text-3xl font-semibold">
           K-Goods에서는 모든 아티스트의 굿즈 정보를 수집하고 있어요
         </h2>
       </div>
@@ -44,7 +44,7 @@ export default function Home() {
       </div>
 
       <div className="flex flex-col gap-7">
-        <h2 className="font-semibold text-3xl">
+        <h2 className="text-3xl font-semibold">
           내가 선택한 아티스트 굿즈 정보를 확인해보세요!
         </h2>
 
@@ -70,22 +70,22 @@ export default function Home() {
       </div>
 
       <div className="flex flex-col gap-7">
-        <h2 className="font-semibold text-3xl">
+        <h2 className="text-3xl font-semibold">
           지금 0000에서 가장 인기있는 NCT소모임!🔥
         </h2>
 
         <Carousel height="200px">
-          <SocialItem />
-          <SocialItem />
-          <SocialItem />
-          <SocialItem />
-          <SocialItem />
-          <SocialItem />
+          <SocialItem id={1} isMain />
+          <SocialItem id={1} isMain />
+          <SocialItem id={1} isMain />
+          <SocialItem id={1} isMain />
+          <SocialItem id={1} isMain />
+          <SocialItem id={1} isMain />
         </Carousel>
       </div>
 
       <div className="flex flex-col gap-7">
-        <h2 className="font-semibold text-3xl">
+        <h2 className="text-3xl font-semibold">
           12월 1주차 NCT 팝업 및 이벤트 🎉
         </h2>
 
@@ -100,7 +100,7 @@ export default function Home() {
       </div>
 
       <div className="flex flex-col gap-7">
-        <h2 className="font-semibold text-3xl">
+        <h2 className="text-3xl font-semibold">
           11월 한달 가장 인기 있는 아티스트🎙️
         </h2>
 
@@ -108,7 +108,7 @@ export default function Home() {
       </div>
 
       <div className="flex flex-col gap-7">
-        <h2 className="font-semibold text-3xl">
+        <h2 className="text-3xl font-semibold">
           지금 가장 인기있는 NCT 굿즈🔥
         </h2>
 
@@ -116,7 +116,7 @@ export default function Home() {
       </div>
 
       <div className="flex flex-col gap-7">
-        <h2 className="font-semibold text-3xl">
+        <h2 className="text-3xl font-semibold">
           방탄소년단의 12월 이벤트 및 팝업 정보{' '}
         </h2>
 

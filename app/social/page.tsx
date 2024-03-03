@@ -1,4 +1,5 @@
 import { Category } from '@/components/common';
+import SocialItem from '@/components/social';
 
 interface SocialProps {
   searchParams: { [key: string]: string | string[] | undefined };
@@ -48,6 +49,16 @@ export default function Social({ searchParams }: SocialProps) {
     <div>
       <section className="mb-9">
         <Category categoryList={categoryList} searchParams={searchParams} />
+      </section>
+
+      <section className="grid grid-cols-2 gap-x-7 gap-y-5">
+        {Array.from(Array(20))
+          .slice(0, 12)
+          .map((v, index) => (
+            <div>
+              <SocialItem id={index} />
+            </div>
+          ))}
       </section>
     </div>
   );
