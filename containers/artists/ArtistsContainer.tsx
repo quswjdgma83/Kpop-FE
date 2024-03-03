@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Card, CardFooter, Chip } from '@nextui-org/react';
-import ArtistItem from './ArtistItem';
+import capitalize from '@/utils/capitalize';
 
 interface ArtistsContainerProps {
   list: {
@@ -41,7 +41,7 @@ export default function ArtistsContainer({ list }: ArtistsContainerProps) {
                 size="lg"
                 className="px-4 text-xl font-bold text-white bg-black/60 h-11"
               >
-                {artist1.artistName}
+                {capitalize(artist1.artistName)}
               </Chip>
             </CardFooter>
           </Card>
@@ -64,7 +64,7 @@ export default function ArtistsContainer({ list }: ArtistsContainerProps) {
                 size="lg"
                 className="px-4 text-xl font-bold text-white bg-black/60 h-11"
               >
-                {artist2.artistName}
+                {capitalize(artist2.artistName)}
               </Chip>
             </CardFooter>
           </Card>
@@ -87,7 +87,7 @@ export default function ArtistsContainer({ list }: ArtistsContainerProps) {
                 size="lg"
                 className="px-4 text-xl font-bold text-white bg-black/60 h-11"
               >
-                {artist3.artistName}
+                {capitalize(artist3.artistName)}
               </Chip>
             </CardFooter>
           </Card>
@@ -110,7 +110,7 @@ export default function ArtistsContainer({ list }: ArtistsContainerProps) {
                 size="lg"
                 className="px-4 text-xl font-bold text-white bg-black/60 h-11"
               >
-                {artist4.artistName}
+                {capitalize(artist4.artistName)}
               </Chip>
             </CardFooter>
           </Card>
@@ -133,7 +133,7 @@ export default function ArtistsContainer({ list }: ArtistsContainerProps) {
                 size="lg"
                 className="px-4 text-xl font-bold text-white bg-black/60 h-11"
               >
-                {artist5.artistName}
+                {capitalize(artist5.artistName)}
               </Chip>
             </CardFooter>
           </Card>
@@ -156,7 +156,7 @@ export default function ArtistsContainer({ list }: ArtistsContainerProps) {
                 size="lg"
                 className="px-4 text-xl font-bold text-white bg-black/60 h-11"
               >
-                {artist6.artistName}
+                {capitalize(artist6.artistName)}
               </Chip>
             </CardFooter>
           </Card>
@@ -179,7 +179,7 @@ export default function ArtistsContainer({ list }: ArtistsContainerProps) {
                 size="lg"
                 className="px-4 text-xl font-bold text-white bg-black/60 h-11"
               >
-                {artist7.artistName}
+                {capitalize(artist7.artistName)}
               </Chip>
             </CardFooter>
           </Card>
@@ -202,7 +202,7 @@ export default function ArtistsContainer({ list }: ArtistsContainerProps) {
                 size="lg"
                 className="px-4 text-xl font-bold text-white bg-black/60 h-11"
               >
-                {artist8.artistName}
+                {capitalize(artist8.artistName)}
               </Chip>
             </CardFooter>
           </Card>
