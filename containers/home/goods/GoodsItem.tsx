@@ -61,7 +61,7 @@ export default function GoodsItem({
             <p className="line-clamp-2">{item_label}</p>
           </div>
 
-          <div className="flex justify-between items-center w-full">
+          <div className="flex items-center justify-between w-full">
             <p className="text-base">
               🗓️ {`${item_date_start}~${item_date_end}`}
             </p>
@@ -70,7 +70,7 @@ export default function GoodsItem({
           </div>
         </CardBody>
 
-        <CardFooter className="absolute bottom-0 h-16 flex items-center justify-between bg-black ">
+        <CardFooter className="absolute bottom-0 flex items-center justify-between h-16 bg-black ">
           <div className="flex items-center justify-between w-full">
             <div className="flex gap-2">
               <Image
@@ -83,7 +83,7 @@ export default function GoodsItem({
               <p className="text-base text-inactive">@{user_id}</p>
             </div>
 
-            <Button className=" bg-transparent" isIconOnly>
+            <Button className="bg-transparent " isIconOnly>
               <IconHeart />
             </Button>
           </div>

@@ -40,7 +40,7 @@ export default function EventCard({
         isBlurred
       >
         <CardHeader className="absolute h-[134px] top-0 z-10 flex flex-col items-start bg-background/70 rounded-[20px]">
-          <div className="w-full flex justify-end">
+          <div className="flex justify-end w-full">
             <IconHeart />
           </div>
           <div className="flex flex-col justify-start">
@@ -64,7 +64,7 @@ export default function EventCard({
 
         <CardFooter className="absolute bottom-0 z-10 flex flex-col items-end">
           <div
-            className="bg-background/80 rounded-full flex flex-col items-center justify-center p-3 z-15"
+            className="flex flex-col items-center justify-center p-3 rounded-full bg-background/80 z-15"
             style={{ width: '84px', height: '84px' }}
           >
             <p className="text-white">서울시</p>

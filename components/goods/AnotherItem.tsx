@@ -38,7 +38,7 @@ export default function AnotherItem({
           className={`object-cover w-[${size}px] h-[${size}px]`}
         />
 
-        <CardFooter className="absolute group-hover:flex items-end text-white bg-black bg-opacity-50 hidden h-full">
+        <CardFooter className="absolute items-end hidden h-full text-white bg-black group-hover:flex bg-opacity-50">
           <div>
             <p className="text-lg font-bold text-highlight">
               {item_price.toLocaleString()}원

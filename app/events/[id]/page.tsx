@@ -120,7 +120,7 @@ export default function EventsDetail() {
           </div>
           <div>
             <div
-              className="grid grid-cols-2 pb-5 mb-5 font-semibold border-b border-white gap-y-5 text-normal"
+              className="pb-5 mb-5 font-semibold border-b border-white grid grid-cols-2 gap-y-5 text-normal"
               style={{ gridTemplateColumns: '40px auto' }}
             >
               <IconFlag />
@@ -130,7 +130,7 @@ export default function EventsDetail() {
               <IconInformation />
               {eventDetail.regId}
             </div>
-            <div className="grid grid-cols-1 pb-5 mb-5 border-b gap-y-5 border-highlight">
+            <div className="pb-5 mb-5 border-b grid grid-cols-1 gap-y-5 border-highlight">
               <div className="grid grid-cols-1 gap-y-3">
                 <Chip
                   radius="full"

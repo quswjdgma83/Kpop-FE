@@ -82,7 +82,7 @@ const Events = () => {
   };
 
   return (
-    <div className="w-full flex">
+    <div className="flex w-full">
       <section className="flex pt-3.5 pl-3.5 pr-5 overflow-y-auto scrollbar-hide border-t border-b border-l border-highlight border-solid border-[1px] w-[376px] h-[2754px]">
         <div>
           <form action="">

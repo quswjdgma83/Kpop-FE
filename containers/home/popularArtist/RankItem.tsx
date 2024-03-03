@@ -9,7 +9,7 @@ interface RankItemProps {
 export default function RankItem({ rank, artist, change }: RankItemProps) {
   return (
     <div className="w-[330px] flex justify-between items-center">
-      <div className="flex gap-5 items-center truncate">
+      <div className="flex items-center truncate gap-5">
         <Chip
           variant="bordered"
           size="lg"
@@ -22,7 +22,7 @@ export default function RankItem({ rank, artist, change }: RankItemProps) {
       {change === 'new' ? (
         <p className="text-center w-11 ">NEW</p>
       ) : (
-        <p className="text-highlight w-11 text-center">&#9650; {change}</p>
+        <p className="text-center text-highlight w-11">&#9650; {change}</p>
       )}
     </div>
   );

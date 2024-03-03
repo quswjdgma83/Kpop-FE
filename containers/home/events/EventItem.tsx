@@ -19,13 +19,13 @@ export default function GoodsItem() {
         <CardFooter className="absolute bottom-0 h-[160px] flex justify-between bg-black">
           <div className="flex flex-col justify-between h-full text-xl">
             <div className="flex flex-col gap-3">
-              <p className="text-highlight font-bold ">23.12.27(카페 대관)</p>
+              <p className="font-bold text-highlight ">23.12.27(카페 대관)</p>
               <p className="font-semibold">📍디어트리 카페</p>
             </div>
             <p className="text-base">솔밭공원역 1번 출구</p>
           </div>
 
-          <div className="bg-white text-xl font-semibold rounded-full w-20 h-20 text-black flex flex-col justify-center items-center">
+          <div className="flex flex-col items-center justify-center w-20 h-20 text-xl font-semibold text-black bg-white rounded-full">
             <p>서울시</p>
             <p>도봉구</p>
           </div>

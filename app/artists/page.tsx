@@ -1,3 +1,11 @@
+import { ethnocentric } from '@/public/fonts/fonts';
+
 export default function Artists() {
-  return <div>아티스트 페이지</div>;
+  return (
+    <section>
+      <p className={`${ethnocentric.className} text-4xl flex justify-center`}>
+        Artist
+      </p>
+    </section>
+  );
 }
