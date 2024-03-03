@@ -2,7 +2,7 @@
 import { useState } from 'react';
 
 import Image from 'next/image';
-import { KakaoMap } from '@/components';
+import { KakaoMap } from '@/components/map/KakaoMap';
 import { GoBackButton } from '@/components/common';
 import { Button, Chip } from '@nextui-org/react';
 import {
@@ -61,7 +61,7 @@ export default function EventsDetail() {
   };
 
   return (
-    <div className="w-full flex">
+    <div className="flex w-full">
       <section className="flex pt-3.5 pl-3.5 pr-5 overflow-y-auto scrollbar-hide border-t border-b border-l border-highlight border-solid border-[1px] w-[376px] h-[1960px]">
         <div>
           <nav className="md-5">
@@ -69,7 +69,7 @@ export default function EventsDetail() {
           </nav>
           <div className="relative flex flex-col w-[346px] items-center mt-5">
             <Button
-              className="absolute bottom-5 right-3 bg-transparent"
+              className="absolute bg-transparent bottom-5 right-3"
               isIconOnly
             >
               <IconHeart />
@@ -87,13 +87,13 @@ export default function EventsDetail() {
               {eventDetail.placeName}
             </span>
           </div>
-          <div className="flex justify-between text-2xl font-normal mb-6">
+          <div className="flex justify-between mb-6 text-2xl font-normal">
             <span>
               {formatEventDates(eventDetail.startDate, eventDetail.endDate)}
             </span>
             <span>{eventDetail.detailAddress}</span>
           </div>
-          <div className="flex justify-between text-xl font-normal border-y border-white p-5 mb-5">
+          <div className="flex justify-between p-5 mb-5 text-xl font-normal border-white border-y">
             <div className="flex flex-col items-center pl-10">
               <Button
                 as={Link}
@@ -103,9 +103,9 @@ export default function EventsDetail() {
               >
                 <IconSend />
               </Button>
-              <span className="text-normal font-semibold">경로</span>
+              <span className="font-semibold text-normal">경로</span>
             </div>
-            <div className="border-r border-white h-50px w-2"></div>
+            <div className="w-2 border-r border-white h-50px"></div>
             <div className="flex flex-col items-center pr-10">
               <Button
                 as={Link}
@@ -115,12 +115,12 @@ export default function EventsDetail() {
               >
                 <IconFlash />
               </Button>
-              <span className="text-normal font-semibold">원문</span>
+              <span className="font-semibold text-normal">원문</span>
             </div>
           </div>
           <div>
             <div
-              className="grid gap-y-5 grid-cols-2 border-b pb-5 mb-5 border-white text-normal font-semibold"
+              className="grid grid-cols-2 pb-5 mb-5 font-semibold border-b border-white gap-y-5 text-normal"
               style={{ gridTemplateColumns: '40px auto' }}
             >
               <IconFlag />
@@ -130,8 +130,8 @@ export default function EventsDetail() {
               <IconInformation />
               {eventDetail.regId}
             </div>
-            <div className="grid gap-y-5 grid-cols-1 border-b pb-5 mb-5 border-highlight">
-              <div className="grid gap-y-3 grid-cols-1">
+            <div className="grid grid-cols-1 pb-5 mb-5 border-b gap-y-5 border-highlight">
+              <div className="grid grid-cols-1 gap-y-3">
                 <Chip
                   radius="full"
                   size="lg"
@@ -150,7 +150,7 @@ export default function EventsDetail() {
                   *이벤트 음료 주문시에만 특전 수령 가능합니다.
                 </p>
               </div>
-              <div className="grid gap-y-3 grid-cols-1">
+              <div className="grid grid-cols-1 gap-y-3">
                 <Chip
                   radius="full"
                   size="lg"
@@ -167,7 +167,7 @@ export default function EventsDetail() {
                   선물을 드립니다.
                 </p>
               </div>
-              <div className="grid gap-y-3 grid-cols-1">
+              <div className="grid grid-cols-1 gap-y-3">
                 <Chip
                   radius="full"
                   size="lg"
@@ -181,7 +181,7 @@ export default function EventsDetail() {
               </div>
             </div>
             <div>
-              <ul className="text-highlight pl-5 list-disc">
+              <ul className="pl-5 list-disc text-highlight">
                 <li>주문은 1인 1메뉴 부탁드립니다.</li>
                 <li>
                   영업시간 및 이용방식에 변동이 있을 수 있으니 방문하시는 당일에
