@@ -14,7 +14,7 @@ export default function SocialItem({ id, isMain }: SocialItemProps) {
       <Card
         className={` bg-black px-4 py-7 flex flex-row gap-20 items-center justify-between`}
       >
-        <div className="flex flex-col h-full gap-16 text-white">
+        <div className="flex flex-col h-full text-white gap-16">
           <p className="line-clamp-2">
             💚only 엔시티 드림💚 공식 포카 교환/양도/거래방
           </p>

@@ -14,7 +14,7 @@ export default function CircleItem({ logo, label }: CircleItemProps) {
       }
       radius="full"
     >
-      <span className="font-medium text-2xl">{label}</span>
+      <span className="text-2xl font-medium">{label}</span>
     </Button>
   );
 }

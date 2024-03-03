@@ -55,7 +55,7 @@ export default function PopularArtist() {
           >
             1위
           </Chip>
-          <div className="flex flex-col gap-1 items-center">
+          <div className="flex flex-col items-center gap-1">
             <p className="text-xl font-semibold">NCT</p>
             <p className="text-highlight">&#9650; 30</p>
           </div>
