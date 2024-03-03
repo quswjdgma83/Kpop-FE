@@ -8,8 +8,9 @@ import IconUpArrow from '@/public/svgs/ArrowUp';
 import IconDownArrow from '@/public/svgs/ArrowDown';
 import AccordionMenu from '@/containers/events/AccordionMenu';
 
-export default function Events() {
+const Events = () => {
   const [isOpen, setIsOpen] = useState(false);
+
   const events = [
     '생일카페',
     '팝업스토어',
@@ -23,109 +24,56 @@ export default function Events() {
 
   const event_list = [
     {
-      placeId: 1,
-      placeCategoryCode: 1,
-      latitude: 128.4,
-      longitude: 35.7,
-      placeName: '뉴진스 팝업스토어',
-      placeAddress: '서울시 강서구',
-      placeImg: '뉴진스.img',
-      placeContent: '뉴진스 팝업스토어 입니다.',
-      placeFollowerCount: 0,
+      eventId: 1,
+      eventCategoryCd: 200,
+      eventName: '뉴진스 팝업스토어',
+      placeName: '스튜디오미개척지',
+      address: '02711',
+      streetAddress: '서울특별시 성북구 보국문로18길 6',
+      detailAddress: '1층, 2층',
+      content: '뉴진스 싸인 포토카드 선착순 100명',
+      notes: '이용시간이 변경될 수 있습니다.',
+      eventUrl: null,
+      latitude: null,
+      longitude: null,
       startDate: '2024-02-01',
       endDate: '2024-03-31',
+      startTime: '11:00:00',
+      endTime: '18:00:00',
+      count: 0,
+      delYN: null,
+      regId: 'cheon3924',
+      regDt: '2024-02-12T18:52:04.630607',
+      modId: null,
+      modDt: '2024-02-12T18:52:04.630607',
       artistId: 1,
       agencyId: 1,
     },
     {
-      placeId: 2,
-      placeCategoryCode: 1,
-      latitude: 128.4,
-      longitude: 35.7,
-      placeName: '뉴진스 해린 생일카페',
-      placeAddress: '서울시 양천구',
-      placeImg: '뉴진스_해린.img',
-      placeContent: '뉴진스 해린 생일카페 입니다.',
-      placeFollowerCount: 0,
+      eventId: 2,
+      eventCategoryCd: 300,
+      eventName: '르세라핌 팬미팅',
+      placeName: '홍대입구역 9번출구',
+      address: '04066',
+      streetAddress: '서울특별시 마포구 와우산로 94',
+      detailAddress: null,
+      content: '기본 특전 : 엽서+스티커 선착순 100명',
+      notes: '시간 맞춰서 입장 부탁드립니다.',
+      eventUrl: null,
+      latitude: null,
+      longitude: null,
       startDate: '2024-02-01',
-      endDate: '2024-03-31',
-      artistId: 1,
-      agencyId: 1,
-    },
-    {
-      placeId: 2,
-      placeCategoryCode: 1,
-      latitude: 128.4,
-      longitude: 35.7,
-      placeName: '뉴진스 해린 생일카페',
-      placeAddress: '서울시 양천구',
-      placeImg: '뉴진스_해린.img',
-      placeContent: '뉴진스 해린 생일카페 입니다.',
-      placeFollowerCount: 0,
-      startDate: '2024-02-01',
-      endDate: '2024-03-31',
-      artistId: 1,
-      agencyId: 1,
-    },
-    {
-      placeId: 2,
-      placeCategoryCode: 1,
-      latitude: 128.4,
-      longitude: 35.7,
-      placeName: '뉴진스 해린 생일카페',
-      placeAddress: '서울시 양천구',
-      placeImg: '뉴진스_해린.img',
-      placeContent: '뉴진스 해린 생일카페 입니다.',
-      placeFollowerCount: 0,
-      startDate: '2024-02-01',
-      endDate: '2024-03-31',
-      artistId: 1,
-      agencyId: 1,
-    },
-    {
-      placeId: 2,
-      placeCategoryCode: 1,
-      latitude: 128.4,
-      longitude: 35.7,
-      placeName: '뉴진스 해린 생일카페',
-      placeAddress: '서울시 양천구',
-      placeImg: '뉴진스_해린.img',
-      placeContent: '뉴진스 해린 생일카페 입니다.',
-      placeFollowerCount: 0,
-      startDate: '2024-02-01',
-      endDate: '2024-03-31',
-      artistId: 1,
-      agencyId: 1,
-    },
-    {
-      placeId: 2,
-      placeCategoryCode: 1,
-      latitude: 128.4,
-      longitude: 35.7,
-      placeName: '뉴진스 해린 생일카페',
-      placeAddress: '서울시 양천구',
-      placeImg: '뉴진스_해린.img',
-      placeContent: '뉴진스 해린 생일카페 입니다.',
-      placeFollowerCount: 0,
-      startDate: '2024-02-01',
-      endDate: '2024-03-31',
-      artistId: 1,
-      agencyId: 1,
-    },
-    {
-      placeId: 2,
-      placeCategoryCode: 1,
-      latitude: 128.4,
-      longitude: 35.7,
-      placeName: '뉴진스 해린 생일카페',
-      placeAddress: '서울시 양천구',
-      placeImg: '뉴진스_해린.img',
-      placeContent: '뉴진스 해린 생일카페 입니다.',
-      placeFollowerCount: 0,
-      startDate: '2024-02-01',
-      endDate: '2024-03-31',
-      artistId: 1,
-      agencyId: 1,
+      endDate: '2024-02-01',
+      startTime: '11:00:00',
+      endTime: '18:00:00',
+      count: 0,
+      delYN: null,
+      regId: 'cheon3924',
+      regDt: '2024-02-12T18:56:22.8181',
+      modId: null,
+      modDt: '2024-02-12T18:56:22.8181',
+      artistId: 2,
+      agencyId: 2,
     },
   ];
 
@@ -193,49 +141,24 @@ export default function Events() {
             </button>
           </div>
           <div>
-            {event_list.map(
-              ({
-                placeId,
-                placeCategoryCode,
-                latitude,
-                longitude,
-                placeName,
-                placeAddress,
-                placeImg,
-                placeContent,
-                placeFollowerCount,
-                startDate,
-                endDate,
-                artistId,
-                agencyId,
-              }) => (
-                <EventCard
-                  placeId={placeId}
-                  placeCategoryCode={placeCategoryCode}
-                  latitude={latitude}
-                  longitude={longitude}
-                  placeName={placeName}
-                  placeAddress={placeAddress}
-                  placeImg={placeImg}
-                  placeContent={placeContent}
-                  placeFollowerCount={placeFollowerCount}
-                  startDate={startDate}
-                  endDate={endDate}
-                  artistId={artistId}
-                  agencyId={agencyId}
-                />
-              ),
-            )}
+            {event_list.map((event) => {
+              // 여기에서 로그를 출력
+              console.log(event);
+              // 컴포넌트 반환
+              return <EventCard key={event.eventId} {...event} />;
+            })}
           </div>
         </div>
       </section>
       <section className="flex">
         <div className="w-[904px] relative">
-          <main className="relative w-screen h-screen">
-            <KakaoMap />
+          <main className="relative w-screen h-[2754px]">
+            <KakaoMap height="2754px" />
           </main>
         </div>
       </section>
     </div>
   );
-}
+};
+
+export default Events;
