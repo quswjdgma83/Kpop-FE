@@ -17,7 +17,7 @@ const artistList = [
     artistName: 'bts',
   },
   {
-    imgSrc: '/mocks/artist/artist_TWS.png',
+    imgSrc: '/mocks/artist/artist_tws.png',
     artistName: 'tws',
   },
   {
