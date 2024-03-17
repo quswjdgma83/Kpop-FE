@@ -10,7 +10,7 @@ export default function ArtistDetail({
   return (
     <div>
       <Image
-        src={`/mocks/artist/detail/artist_${id}_detail.png`}
+        src={`/mocks/artist/detail/artist_rize_detail.png`}
         width={1280}
         height={640}
         alt={`아티스트 ${id} 대표 이미지`}
@@ -19,7 +19,7 @@ export default function ArtistDetail({
 
       <section className="flex flex-col items-center -mt-[75px] gap-[10px] mb-[100px]">
         <Image
-          src={`/mocks/artist/detail/artist_${id}_logo.png`}
+          src={`/mocks/artist/detail/artist_rize_logo.png`}
           width={150}
           height={150}
           alt={`아티스트 ${id} 로고 이미지`}
@@ -73,12 +73,68 @@ export default function ArtistDetail({
         </div>
       </section>
 
-      <section>
+      <section className="flex flex-col gap-[30px]">
         <h2
           className={`${ethnocentric.className} text-4xl border-t-[10px] border-[#0A60FF] max-w-fit`}
         >
           Member
         </h2>
+
+        <div className="flex flex-col gap-5">
+          <div className="flex gap-5">
+            <Image
+              src="/mocks/artist/detail/artist_rize_member_1.png"
+              width={350}
+              height={350}
+              alt={`아티스트 ${id} 멤버 1 이미지`}
+              className="object-cover rounded-xl"
+            />
+            <Image
+              src="/mocks/artist/detail/artist_rize_member_2.png"
+              width={350}
+              height={350}
+              alt={`아티스트 ${id} 멤버 2 이미지`}
+            />
+            <Image
+              src="/mocks/artist/detail/artist_rize_member_3.png"
+              width={350}
+              height={350}
+              alt={`아티스트 ${id} 멤버 3 이미지`}
+            />
+          </div>
+
+          <div className="flex justify-end gap-5">
+            <Image
+              src="/mocks/artist/detail/artist_rize_member_4.png"
+              width={350}
+              height={350}
+              alt={`아티스트 ${id} 멤버 4 이미지`}
+              className="object-cover rounded-xl"
+            />
+            <Image
+              src="/mocks/artist/detail/artist_rize_member_5.png"
+              width={350}
+              height={350}
+              alt={`아티스트 ${id} 멤버 5 이미지`}
+            />
+          </div>
+
+          <div className="flex gap-5">
+            <Image
+              src="/mocks/artist/detail/artist_rize_member_6.png"
+              width={350}
+              height={350}
+              alt={`아티스트 ${id} 멤버 6 이미지`}
+              className="object-cover rounded-xl"
+            />
+            <Image
+              src="/mocks/artist/detail/artist_rize_member_7.png"
+              width={350}
+              height={350}
+              alt={`아티스트 ${id} 멤버 7 이미지`}
+            />
+          </div>
+        </div>
       </section>
     </div>
   );
