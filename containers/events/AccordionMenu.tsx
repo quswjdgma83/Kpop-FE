@@ -1,6 +1,4 @@
-'use client';
 import { useState } from 'react';
-
 import { IconChecked } from '@/public/svgs';
 
 interface AccordionMenuProps {
@@ -10,24 +8,32 @@ interface AccordionMenuProps {
 
 const AccordionMenu: React.FC<AccordionMenuProps> = ({ list, isOpen }) => {
   const [selectedItem, setSelectedItem] = useState<string | null>(null);
+  const [searchTerm, setSearchTerm] = useState('');
 
   const handleItemClick = (item: string) => {
     setSelectedItem(item);
   };
-  console.log(selectedItem);
+
+  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(event.target.value);
+  };
+
+  // 리스트를 검색어에 따라 필터링
+  const filteredList = list.filter((item) =>
+    item.toLowerCase().includes(searchTerm.toLowerCase()),
+  );
 
   return (
     <div className="w-[346px] mb-4">
       <div className="flex flex-col items-center p-2.5 gap-[4px] bg-[#3B3B3B] rounded-[8px]">
-        <button
-          type="button"
-          className="flex items-center w-[326px] h-[48px] pl-[16px] pr-[24px] py-[8px] rounded-[8px] overflow-hidden border border-solid border-[#5ed0ff]"
-          // onClick={}
-        >
-          {selectedItem ?? list[0]}
-        </button>
+        <input
+          type="text"
+          placeholder={selectedItem ?? list[0]}
+          onChange={handleSearchChange}
+          className="flex items-center w-[326px] h-[48px] pl-[16px] pr-[24px] py-[8px] mb-1 rounded-[8px] overflow-hidden border border-solid border-[#5ed0ff] bg-[#3B3B3B]"
+        />
         {isOpen &&
-          list.map((item) => (
+          filteredList.map((item) => (
             <button
               key={item}
               onClick={() => handleItemClick(item)}
