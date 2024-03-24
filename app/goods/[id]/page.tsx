@@ -1,9 +1,8 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { Chip, Button, Card } from '@nextui-org/react';
 import { GoBackButton, Views } from '@/components/common';
 import { IconShare, IconArrowRight } from '@/public/svgs';
-import AnohterItem from '@/containers/goods/AnotherItem';
+import AnotherItem from '@/components/goods';
 
 const item = {
   item_id: '1',
@@ -97,7 +96,7 @@ export default function GoodsDetail({
           {Array.from(Array(20))
             .slice(0, 12)
             .map((v) => (
-              <AnohterItem
+              <AnotherItem
                 item_id={item.item_id}
                 item_image={item.item_image}
                 item_label={item.item_label}
@@ -105,6 +104,7 @@ export default function GoodsDetail({
                 artist_name={item.artist_name}
                 user_avatar={item.user_avatar}
                 user_name={item.user_name}
+                size={200}
               />
             ))}
         </div>

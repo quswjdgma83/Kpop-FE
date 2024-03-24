@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 import { Input } from '@nextui-org/react';
 import EventCard from '@/containers/events/EventCard';
-import { KakaoMap } from '@/components';
+import { KakaoMap } from '@/components/map/KakaoMap';
 import IconUpArrow from '@/public/svgs/ArrowUp';
 import IconDownArrow from '@/public/svgs/ArrowDown';
 import AccordionMenu from '@/containers/events/AccordionMenu';
@@ -160,7 +160,7 @@ const Events = () => {
   };
 
   return (
-    <div className="w-full flex">
+    <div className="flex w-full">
       <section className="flex pt-3.5 pl-3.5 pr-5 overflow-y-auto scrollbar-hide border-t border-b border-l border-highlight border-solid border-[1px] w-[376px] h-[2754px]">
         <div>
           <form action="">
@@ -219,9 +219,12 @@ const Events = () => {
             </button>
           </div>
           <div>
-            {event_list.map((event) => (
-              <EventCard key={event.eventId} {...event} />
-            ))}
+            {event_list.map((event) => {
+              // 여기에서 로그를 출력
+              console.log(event);
+              // 컴포넌트 반환
+              return <EventCard key={event.eventId} {...event} />;
+            })}
           </div>
         </div>
       </section>

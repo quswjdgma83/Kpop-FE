@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Button, Chip, Input } from '@nextui-org/react';
 import { IconAdd, IconCancel, IconSearch } from '@/public/svgs';
 import { Item } from '@/containers/goods';
+import { Category } from '@/components/common';
 
 interface GoodsProps {
   searchParams: { [key: string]: string | string[] | undefined };
@@ -421,41 +422,7 @@ export default function Goods({ searchParams }: GoodsProps) {
   return (
     <div className="w-full">
       <section className="mb-9">
-        <div className="flex flex-col justify-center py-10 mb-8 bg-black gap-10">
-          <Input
-            size="sm"
-            radius="none"
-            variant="bordered"
-            placeholder="다양한 굿즈들을 검색해보세요 !"
-            endContent={<IconSearch />}
-            className="h-9 w-[440px] p-0 mx-auto"
-          />
-          <nav className="flex justify-between px-4">
-            {categoryList.map(({ label, category }) => {
-              const borderColor =
-                searchParams?.category === category
-                  ? 'border-highlight'
-                  : 'border-white';
-
-              const textColor =
-                searchParams?.category === category
-                  ? 'text-highlight'
-                  : 'text-white';
-
-              return (
-                <Button
-                  as={Link}
-                  href={`?category=${category}`}
-                  variant="bordered"
-                  radius="full"
-                  className={`${borderColor} ${textColor} text-base h-9`}
-                >
-                  {label}
-                </Button>
-              );
-            })}
-          </nav>
-        </div>
+        <Category categoryList={categoryList} searchParams={searchParams} />
 
         <div className="flex justify-between mb-5">
           <h1 className="text-xl">
