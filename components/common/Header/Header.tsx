@@ -67,6 +67,12 @@ export default function Header() {
         </NavbarContent>
 
         <NavbarContent justify="end" className="absolute right-[-127px] gap-7">
+          <NavbarItem key={4}>
+            {/* TODO: 로그인 기능 개발 후 수정 필요 */}
+            <Link href="/mypage" className="text-xl">
+              마이페이지
+            </Link>
+          </NavbarItem>
           <NavbarItem>
             <Link href="/signin" className="text-xl">
               로그인
