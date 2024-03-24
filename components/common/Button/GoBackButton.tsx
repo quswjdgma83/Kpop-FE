@@ -4,7 +4,11 @@ import { useCallback } from 'react';
 import { Button } from '@nextui-org/react';
 import { IconArrowLeft } from '@/public/svgs';
 
-export default function GoBackButton() {
+interface GoBackButtonProps {
+  content?: string;
+}
+
+export default function GoBackButton({ content }: GoBackButtonProps) {
   const onClick = useCallback(() => {
     history.back();
   }, []);
@@ -15,7 +19,7 @@ export default function GoBackButton() {
       className="p-0 text-base text-white bg-transparent"
       onClick={onClick}
     >
-      뒤로가기
+      {content ? content : '뒤로가기'}
     </Button>
   );
 }
