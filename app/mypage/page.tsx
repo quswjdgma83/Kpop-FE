@@ -276,17 +276,17 @@ export default function MyPage() {
           </Button>
         </div>
         <div className="flex items-center p-5 text-xl font-normal border-solid border-2 rounded-lg border-highlight w-[700px] h-[120px]">
-          <div className="flex flex-col items-center pr-20 pl-20">
+          <div className="flex flex-col items-center pl-20 pr-20">
             <span className="font-semibold text-normal">999</span>
             <span className="font-semibold text-normal">팔로워</span>
           </div>
           <div className="w-2 border-r border-white h-[50px]"></div>
-          <div className="flex flex-col items-center pr-20 pl-20">
+          <div className="flex flex-col items-center pl-20 pr-20">
             <span className="font-semibold text-normal">999</span>
             <span className="font-semibold text-normal">팔로잉</span>
           </div>
           <div className="w-2 border-r border-white h-[50px]"></div>
-          <div className="flex flex-col items-center pr-20 pl-20">
+          <div className="flex flex-col items-center pl-20 pr-20">
             <span className="font-semibold text-normal">999</span>
             <span className="font-semibold text-normal">좋아요</span>
           </div>
@@ -295,7 +295,7 @@ export default function MyPage() {
       <p className="font-semibold text-[22px] mt-20">내가 좋아요한 굿즈</p>
       <section
         ref={goodsRef}
-        className="flex overflow-x-auto gap-x-4 gap-y-9 p-5 scrollbar-hide"
+        className="flex p-5 overflow-x-auto gap-x-4 gap-y-9 scrollbar-hide"
         onWheel={handleWheelGoods}
       >
         {itemList.map(
@@ -344,7 +344,7 @@ export default function MyPage() {
       <p className="font-semibold text-[22px] mt-20">내가 좋아요한 이벤트</p>
       <section
         ref={eventRef}
-        className="flex overflow-x-auto gap-x-4 gap-y-9 p-5 scrollbar-hide"
+        className="flex p-5 overflow-x-auto gap-x-4 gap-y-9 scrollbar-hide"
         onWheel={handleWheelEvent}
       >
         {event_list.map((event) => {

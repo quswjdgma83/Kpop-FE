@@ -16,6 +16,7 @@ import IconFlag from './Flag';
 import IconInformation from './Information';
 import IconLamp from './Lamp';
 import IconSend from './Send';
+import IconEnter from './Enter';
 
 export {
   IconAdd,
@@ -36,4 +37,5 @@ export {
   IconInformation,
   IconLamp,
   IconSend,
+  IconEnter,
 };

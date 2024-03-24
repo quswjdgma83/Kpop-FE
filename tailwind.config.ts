@@ -17,6 +17,7 @@ const config: Config = {
         highlight: '#5ED0FF',
         inactive: 'rgba(255, 255, 255, 0.58)',
         eventTagBg: '#515254',
+        themeBlue: '#0A60FF',
       },
       width: {
         desktop: '1280px',
