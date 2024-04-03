@@ -7,6 +7,8 @@ import { KakaoMap } from '@/components/map/KakaoMap';
 import IconUpArrow from '@/public/svgs/ArrowUp';
 import IconDownArrow from '@/public/svgs/ArrowDown';
 import AccordionMenu from '@/containers/events/AccordionMenu';
+import axios from 'axios';
+import { useEffect } from 'react';
 
 const Events = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -154,7 +156,10 @@ const Events = () => {
       agencyId: 6,
     },
   ];
-
+  useEffect(() => {
+    let a = axios.get('/place/list');
+    console.log(a);
+  }, []);
   const handleToggleAccordion = () => {
     setIsOpen(!isOpen);
   };
@@ -220,9 +225,6 @@ const Events = () => {
           </div>
           <div>
             {event_list.map((event) => {
-              // 여기에서 로그를 출력
-              console.log(event);
-              // 컴포넌트 반환
               return <EventCard key={event.eventId} {...event} />;
             })}
           </div>
