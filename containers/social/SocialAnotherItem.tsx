@@ -31,7 +31,7 @@ const memberList = [
 export default function SocialAnotherItem() {
   return (
     <div className="w-[412px] flex flex-col gap-3">
-      <Card className="w-[412px] h-[240px] overflow-hidden">
+      <Card className="w-[412px] h-[240px] overflow-hidden ">
         <CardHeader className="absolute">
           <div className="flex flex-wrap gap-[5px]">
             {memberList.map(({ name }) => (

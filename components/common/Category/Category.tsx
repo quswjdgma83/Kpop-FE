@@ -1,16 +1,7 @@
 import Link from 'next/link';
 import { Input, Button } from '@nextui-org/react';
 import { IconSearch } from '@/public/svgs';
-
-interface CategoryProps {
-  categoryList: {
-    label: string;
-    category: string;
-  }[];
-  searchParams: {
-    [key: string]: string | string[] | undefined;
-  };
-}
+import { CategoryProps } from '@/types/common';
 
 export default function Category({
   categoryList,

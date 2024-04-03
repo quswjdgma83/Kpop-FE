@@ -2,21 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardFooter, CardHeader, Button } from '@nextui-org/react';
 import { IconEyeOpen, IconHeart } from '@/public/svgs';
-
-interface EventCardProps {
-  eventId: number;
-  eventCategoryCd: number;
-  latitude?: number | null;
-  longitude?: number | null;
-  placeName: string;
-  streetAddress: string;
-  placeContent?: string;
-  placeFollowerCount?: number;
-  startDate: string;
-  endDate: string;
-  artistId: number;
-  agencyId: number;
-}
+import { EventCardProps } from '@/types/event';
 
 export default function EventCard({
   eventId,
@@ -35,7 +21,7 @@ export default function EventCard({
   return (
     <Link href={`events/${eventId}`}>
       <Card
-        className="w-[346px] h-[400px] relative rounded-lg mb-5"
+        className="w-[346px] h-[400px] relative rounded-lg mb-5  hover:scale-105 transition-transform duration-300"
         isPressable
         isBlurred
       >
@@ -59,7 +45,7 @@ export default function EventCard({
           alt="굿즈 이미지"
           width={340}
           height={400}
-          className="rounded-[20px]"
+          className="rounded-[20px] "
         />
 
         <CardFooter className="absolute bottom-0 z-10 flex flex-col items-end">

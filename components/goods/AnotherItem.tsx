@@ -1,17 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Card, CardBody, CardFooter } from '@nextui-org/react';
-
-interface AnotherItemProps {
-  item_id: string;
-  item_image: string;
-  item_label: string;
-  item_price: number;
-  artist_name: string;
-  user_name: string;
-  user_avatar: string;
-  size: number;
-}
+import { AnotherItemProps } from '@/types/goods';
 
 export default function AnotherItem({
   item_id,

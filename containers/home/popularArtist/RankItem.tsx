@@ -1,10 +1,5 @@
+import { RankItemProps } from '@/types/artist';
 import { Chip } from '@nextui-org/react';
-
-interface RankItemProps {
-  rank: number;
-  artist: string;
-  change: string | number;
-}
 
 export default function RankItem({ rank, artist, change }: RankItemProps) {
   return (

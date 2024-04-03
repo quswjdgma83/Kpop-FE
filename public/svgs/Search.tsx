@@ -1,6 +1,4 @@
-interface IconSearchProps {
-  color?: string;
-}
+import { IconSearchProps } from '@/types/common';
 
 export default function IconSearch({ color }: IconSearchProps) {
   return (
