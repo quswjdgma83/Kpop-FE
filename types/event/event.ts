@@ -1,19 +1,4 @@
-export interface ClientsQueryModel {
-  query: {
-    status?: string;
-    name?: string;
-    phone?: string;
-    marketing?: string | number;
-    createdStart?: string;
-    createdEnd?: string;
-    updatedStart?: string;
-    updatedEnd?: string;
-    page?: string;
-    pageSize?: string;
-  };
-}
-
-export interface EventCard {
+export interface EventCardProps {
   eventId: number;
   eventCategoryCd: number;
   latitude?: number | null;
@@ -26,4 +11,9 @@ export interface EventCard {
   endDate: string;
   artistId: number;
   agencyId: number;
+}
+
+export interface AccordionMenuProps {
+  list: string[];
+  isOpen?: boolean;
 }

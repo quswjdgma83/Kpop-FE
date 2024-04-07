@@ -7,10 +7,6 @@ import axios from 'axios';
 import { useEffect } from 'react';
 
 export default function GoodsItem() {
-  useEffect(() => {
-    let a = axios.get('/place/list');
-    console.log(a);
-  }, []);
   return (
     <Link href="#" className="flex mr-4">
       <Card className="w-[400px] h-[530px] relative text-white rounded-3xl">
