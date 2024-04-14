@@ -39,6 +39,8 @@ export interface ArtistDetailResponse {
   agencyId: number;
 }
 
+export type ArtistSearchResponse = ArtistDetailResponse[];
+
 export interface ArtistsContainerProps {
   list: {
     imgSrc: string;

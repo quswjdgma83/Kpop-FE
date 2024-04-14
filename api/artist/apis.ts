@@ -7,3 +7,5 @@ export const getArtistList = ({pageParam}: {pageParam: number;}) =>
     url: '/artist/list',
     params: {page: pageParam, size: 16}
   })
+
+  
