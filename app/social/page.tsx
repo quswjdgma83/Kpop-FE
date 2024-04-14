@@ -1,9 +1,6 @@
 import { Category } from '@/components/common';
 import SocialItem from '@/components/social';
-
-interface SocialProps {
-  searchParams: { [key: string]: string | string[] | undefined };
-}
+import { SocialProps } from '@/types/social';
 
 const categoryList = [
   {
@@ -55,7 +52,7 @@ export default function Social({ searchParams }: SocialProps) {
         {Array.from(Array(20))
           .slice(0, 12)
           .map((v, index) => (
-            <div>
+            <div className="hover:scale-105 transition-transform duration-300">
               <SocialItem id={index} />
             </div>
           ))}

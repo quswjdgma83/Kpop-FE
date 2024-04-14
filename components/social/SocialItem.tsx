@@ -2,11 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Card, Avatar } from '@nextui-org/react';
 import { IconParticipant } from '@/public/svgs';
-
-interface SocialItemProps {
-  id: number;
-  isMain?: boolean;
-}
+import { SocialItemProps } from '@/types/social';
 
 export default function SocialItem({ id, isMain }: SocialItemProps) {
   return (

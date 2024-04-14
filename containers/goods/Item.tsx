@@ -3,19 +3,7 @@ import Link from 'next/link';
 import { Card, CardFooter, CardHeader, Button } from '@nextui-org/react';
 import { IconHeart, IconWish } from '@/public/svgs';
 import { Views } from '@/components/common';
-
-interface ItemProps {
-  item_id: string;
-  item_image: string;
-  item_label: string;
-  item_price: number;
-  item_date_start: string;
-  item_date_end: string;
-  item_view: number;
-  user_avatar: string;
-  user_name: string;
-  user_id: string;
-}
+import { ItemProps } from '@/types/goods';
 
 export default function Item({
   item_id,

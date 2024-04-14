@@ -1,10 +1,6 @@
 import { useState } from 'react';
 import { IconChecked } from '@/public/svgs';
-
-interface AccordionMenuProps {
-  list: string[];
-  isOpen?: boolean;
-}
+import { AccordionMenuProps } from '@/types/event';
 
 const AccordionMenu: React.FC<AccordionMenuProps> = ({ list, isOpen }) => {
   const [selectedItem, setSelectedItem] = useState<string | null>(null);

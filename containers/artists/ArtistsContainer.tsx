@@ -2,13 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Card, CardFooter, Chip } from '@nextui-org/react';
 import capitalize from '@/utils/capitalize';
-
-interface ArtistsContainerProps {
-  list: {
-    imgSrc: string;
-    artistName: string;
-  }[];
-}
+import { ArtistsContainerProps } from '@/types/artist';
 
 export default function ArtistsContainer({ list }: ArtistsContainerProps) {
   const [

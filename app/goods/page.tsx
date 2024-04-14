@@ -3,10 +3,7 @@ import { Button, Chip, Input } from '@nextui-org/react';
 import { IconAdd, IconCancel, IconSearch } from '@/public/svgs';
 import { Item } from '@/containers/goods';
 import { Category } from '@/components/common';
-
-interface GoodsProps {
-  searchParams: { [key: string]: string | string[] | undefined };
-}
+import { GoodsProps } from '@/types/goods';
 
 const categoryList = [
   {

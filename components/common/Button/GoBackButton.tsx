@@ -3,10 +3,7 @@
 import { useCallback } from 'react';
 import { Button } from '@nextui-org/react';
 import { IconArrowLeft } from '@/public/svgs';
-
-interface GoBackButtonProps {
-  content?: string;
-}
+import { GoBackButtonProps } from '@/types/common';
 
 export default function GoBackButton({ content }: GoBackButtonProps) {
   const onClick = useCallback(() => {

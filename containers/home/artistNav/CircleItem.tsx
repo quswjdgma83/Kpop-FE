@@ -1,9 +1,5 @@
+import { CircleItemProps } from '@/types/common';
 import { Avatar, Button } from '@nextui-org/react';
-
-interface CircleItemProps {
-  logo: string;
-  label: string;
-}
 
 export default function CircleItem({ logo, label }: CircleItemProps) {
   return (

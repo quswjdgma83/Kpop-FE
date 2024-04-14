@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { Card, CardFooter, Button } from '@nextui-org/react';
 import { IconHeart, IconWish } from '@/public/svgs';
 import { Views } from '@/components/common';
+import axios from 'axios';
+import { useEffect } from 'react';
 
 export default function GoodsItem() {
   return (
