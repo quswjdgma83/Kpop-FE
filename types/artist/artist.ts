@@ -24,6 +24,21 @@ export interface ArtistListResponse {
   pageInfo: PageInfo;
 }
 
+export interface ArtistDetailResponse {
+  artistId: number;
+  artistCd: string;
+  artistName: string;
+  comment: string;
+  followCnt: number;
+  gender: string;
+  unitYN: string | null;
+  delYN: string;
+  regId: string;
+  regDt: string;
+  modDt: string;
+  agencyId: number;
+}
+
 export interface ArtistsContainerProps {
   list: {
     imgSrc: string;
