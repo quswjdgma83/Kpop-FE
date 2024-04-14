@@ -1,12 +1,38 @@
+'use client';
+
 import { Button } from '@nextui-org/react';
 import Image from 'next/image';
 import { ethnocentric } from '@/public/fonts/fonts';
+import http from '@/api/core';
+import { QueryClient } from '@tanstack/react-query';
+
+export const getArtistDetail = (artistId: string) =>
+  http.get({
+    url: `/artist/one/${artistId}`,
+  });
+
+export const useGetArtistDetail = ({
+  id,
+  queryClient,
+}: {
+  id: string;
+  queryClient: QueryClient;
+}) =>
+  queryClient.fetchQuery({
+    queryKey: ['/artist/one', id],
+    queryFn: () => getArtistDetail(id),
+  });
 
 export default function ArtistDetail({
   params: { id },
 }: {
   params: { id: string };
 }) {
+  const queryClient = new QueryClient();
+  const response = useGetArtistDetail({ id, queryClient });
+
+  console.log(response);
+
   return (
     <div>
       <Image
