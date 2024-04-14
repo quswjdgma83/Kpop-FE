@@ -1,6 +1,6 @@
 'use client';
 
-import { useGetArtistList } from '@/api/artist';
+// import { useGetArtistList } from '@/api/artist';
 import ArtistsContainer from './ArtistsContainer';
 
 const artistList = [
@@ -103,8 +103,8 @@ const artistList = [
 ];
 
 export default function ArtistListContainer() {
-  const { data, hasNextPage, isFetching, fetchNextPage, refetch } =
-    useGetArtistList();
+  // const { data, hasNextPage, isFetching, fetchNextPage, refetch } =
+  //   useGetArtistList();
 
   return (
     <section className="flex flex-col w-full gap-5">

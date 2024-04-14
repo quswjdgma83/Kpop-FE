@@ -8,7 +8,7 @@ export const useGetArtistList = () =>
   useSuspenseInfiniteQuery({
     queryKey: ['/artist/list'],
     queryFn: ({pageParam}: {pageParam: number}) => getArtistList({pageParam}),
-     initialPageParam: 0,
+     initialPageParam: 1,
     getNextPageParam: ({ data }) => {
       const { pageInfo } = data || {};
       const { totalPages, page } = pageInfo || {};
