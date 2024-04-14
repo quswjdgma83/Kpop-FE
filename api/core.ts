@@ -19,9 +19,7 @@ const axiosInstance: AxiosInstance = axios.create({
   withCredentials: true,
 });
 
-axios.defaults.paramsSerializer = (params) => {
-  return qs.stringify(params);
-};
+axios.defaults.paramsSerializer = (params) => qs.stringify(params);
 
 axiosInstance.interceptors.request.use(
   async (config: InternalAxiosRequestConfig) => {
@@ -30,6 +28,7 @@ axiosInstance.interceptors.request.use(
     if (!accessToken) {
       return config;
     }
+    // eslint-disable-next-line no-param-reassign
     config.headers.Authorization = `Bearer ${accessToken}`;
     return config;
   },
@@ -42,11 +41,9 @@ axiosInstance.interceptors.response.use(
   (response: AxiosResponse) => response.data,
   async (error: AxiosError) => {
     if (!error.response) {
-      console.error('에러 응답이 없습니다.');
       return Promise.reject(error);
     }
 
-    console.error('에러가 발생했습니다.');
     return Promise.reject(error);
   },
 );
