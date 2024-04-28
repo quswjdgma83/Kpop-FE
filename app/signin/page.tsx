@@ -1,7 +1,16 @@
+'use client';
+
+import { useState, useCallback } from 'react';
 import { Input, Button } from '@nextui-org/react';
-import { IconEyeOpen } from '@/public/svgs';
+import { IconEyeClosed, IconEyeOpen } from '@/public/svgs';
 
 export default function Signin() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const toggleSwitch = useCallback(() => {
+    setIsVisible(!isVisible);
+  }, [isVisible]);
+
   return (
     <section className="flex flex-col items-center gap-8 my-10 ">
       <h2 className="text-xl font-semibold">로그인</h2>
@@ -22,12 +31,20 @@ export default function Signin() {
         <h3 className="font-semibold text-inactive">비밀번호</h3>
         <div className="flex flex-col gap-3">
           <Input
-            type="password"
+            type={isVisible ? 'string' : 'password'}
             placeholder="비밀번호 입력"
             classNames={{
               inputWrapper: ['bg-component'],
             }}
-            endContent={<IconEyeOpen password />}
+            endContent={
+              <Button
+                isIconOnly
+                className="bg-transparent"
+                onClick={toggleSwitch}
+              >
+                {isVisible ? <IconEyeClosed /> : <IconEyeOpen password />}
+              </Button>
+            }
           />
         </div>
       </div>
