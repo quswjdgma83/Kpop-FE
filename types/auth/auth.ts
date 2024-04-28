@@ -1,3 +1,15 @@
+export interface VerifyEmailForm {
+  email: string;
+  verificationCode: string;
+}
+
+export interface SignUpForm {
+  userEmail: string;
+  userName: string;
+  nickname: string;
+  password: string;
+}
+
 export interface SignUpResponse {
   userId: number;
   userName: string;

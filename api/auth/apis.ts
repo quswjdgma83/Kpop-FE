@@ -12,3 +12,16 @@ export const postLogin = ({userEmail, password}: {userEmail: string; password: s
       url: '/login',
       data: {userEmail, password}
   })
+
+export const postSendVerification = ({email}: {email: string}) =>
+  http.post({
+    url: '/email/send-verification-email',
+    data: {email}
+  })
+
+export const postVerifyEmail = ({email, verificationCode}: {email: string; verificationCode: string }) =>
+  http.post({
+    url: '/email/verify-email',
+    data: {email, verificationCode}
+  })
+
