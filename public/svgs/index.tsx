@@ -17,6 +17,7 @@ import IconInformation from './Information';
 import IconLamp from './Lamp';
 import IconSend from './Send';
 import IconEnter from './Enter';
+import IconEyeClosed from './EyeClosed';
 
 export {
   IconAdd,
@@ -38,4 +39,5 @@ export {
   IconLamp,
   IconSend,
   IconEnter,
+  IconEyeClosed,
 };
