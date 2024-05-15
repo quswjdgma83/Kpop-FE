@@ -4,7 +4,6 @@ export interface VerifyEmailForm {
 }
 
 export interface SignUpForm {
-  userEmail: string;
   userName: string;
   nickname: string;
   password: string;

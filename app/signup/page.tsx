@@ -3,12 +3,17 @@
 import { useState, useCallback } from 'react';
 import { Input, Button } from '@nextui-org/react';
 import { IconEyeOpen, IconEyeClosed } from '@/public/svgs';
+import { postSendVerification, postVerifyEmail } from '@/api/auth';
+import { useForm, SubmitHandler } from 'react-hook-form';
+import { SignUpForm } from '@/types/auth';
 
 export default function Signup() {
   const [isVisible, setIsVisible] = useState(false);
   const [isVisibleCheck, setIsVisibleCheck] = useState(false);
   const [isVerification, setIsVerification] = useState(false);
   const [email, setEmail] = useState('');
+  const [verificationCode, setVerificationCode] = useState('');
+  const { register, handleSubmit, watch } = useForm();
 
   const toggleSwitch = useCallback(() => {
     setIsVisible(!isVisible);
@@ -18,10 +23,6 @@ export default function Signup() {
     setIsVisibleCheck(!isVisibleCheck);
   }, [isVisibleCheck]);
 
-  const onClickVerification = useCallback(() => {
-    setIsVerification(true);
-  }, []);
-
   const onChangeEmail = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
       setEmail(e.target.value);
@@ -29,11 +30,39 @@ export default function Signup() {
     [],
   );
 
+  const onSubmitEmail = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>) => {
+      e.preventDefault();
+      setIsVerification(true);
+      postSendVerification({ email });
+    },
+    [email],
+  );
+
+  const onChangeCode = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    setVerificationCode(e.target.value);
+  }, []);
+
+  const onSubmitCode = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>) => {
+      e.preventDefault();
+      postVerifyEmail({ email, verificationCode });
+    },
+    [email, verificationCode],
+  );
+
+  const onSubmitSignUp: SubmitHandler<SignUpForm> = useCallback((data) => {
+    // console.log(data);
+  }, []);
+
   return (
     <section className="flex flex-col items-center gap-8 my-10 ">
       <h2 className="text-xl font-semibold">이메일 간편가입</h2>
 
-      <form className="flex flex-col gap-8">
+      <form
+        className="flex flex-col gap-8"
+        onSubmit={handleSubmit(onSubmitSignUp)}
+      >
         <div className="flex flex-col gap-4 w-[480px]">
           <h3 className="font-semibold text-inactive">이메일</h3>
           <div className="flex flex-col gap-2">
@@ -50,8 +79,8 @@ export default function Signup() {
 
               <Button
                 className="w-[120px] bg-themeBlue/20 border-themeBlue text-inactive h-14"
-                onClick={onClickVerification}
-                // isDisabled
+                onClick={onSubmitEmail}
+                isDisabled={isVerification}
               >
                 인증번호 전송
               </Button>
@@ -65,9 +94,13 @@ export default function Signup() {
                   classNames={{
                     inputWrapper: ['bg-component'],
                   }}
+                  onChange={onChangeCode}
                 />
 
-                <Button className="w-[120px] bg-themeBlue/20 border-themeBlue text-inactive h-14">
+                <Button
+                  className="w-[120px] bg-themeBlue/20 border-themeBlue text-inactive h-14"
+                  onClick={onSubmitCode}
+                >
                   인증하기
                 </Button>
               </div>
@@ -82,7 +115,9 @@ export default function Signup() {
             placeholder="이름 입력"
             classNames={{
               inputWrapper: ['bg-component'],
+              input: ['bg-component', 'focus:bg-component'],
             }}
+            {...register('userName', { required: true })}
           />
         </div>
 
@@ -94,6 +129,7 @@ export default function Signup() {
             classNames={{
               inputWrapper: ['bg-component'],
             }}
+            {...register('nickname', { required: true })}
           />
         </div>
 
@@ -115,6 +151,7 @@ export default function Signup() {
                   {isVisible ? <IconEyeClosed /> : <IconEyeOpen password />}
                 </Button>
               }
+              {...register('password', { required: true })}
             />
             <Input
               type={isVisibleCheck ? 'string' : 'password'}
