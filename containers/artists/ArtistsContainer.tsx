@@ -20,9 +20,7 @@ export default function ArtistsContainer({ list }: ArtistsContainerProps) {
     <section className="relative w-full h-[648px]">
       {artist1 && (
         <Link href={`/artists/${artist1.artistName}`} className="flex">
-          <Card
-            className={`w-[400px] h-[275px] absolute left-0 top-0 rounded-lg`}
-          >
+          <Card className="w-[400px] h-[275px] absolute left-0 top-0 rounded-lg">
             <Image
               src={artist1.imgSrc}
               width={400}
@@ -43,9 +41,7 @@ export default function ArtistsContainer({ list }: ArtistsContainerProps) {
       )}
       {artist2 && (
         <Link href={`/artists/${artist2.artistName}`} className="flex">
-          <Card
-            className={`w-[280px] h-[219px] absolute left-[420px] top-0 rounded-lg`}
-          >
+          <Card className="w-[280px] h-[219px] absolute left-[420px] top-0 rounded-lg">
             <Image
               src={artist2.imgSrc}
               width={280}
@@ -66,9 +62,7 @@ export default function ArtistsContainer({ list }: ArtistsContainerProps) {
       )}
       {artist3 && (
         <Link href={`/artists/${artist3.artistName}`} className="flex">
-          <Card
-            className={`w-[300px] h-[295px] absolute left-[720px] top-0 rounded-lg`}
-          >
+          <Card className="w-[300px] h-[295px] absolute left-[720px] top-0 rounded-lg">
             <Image
               src={artist3.imgSrc}
               width={300}
@@ -89,9 +83,7 @@ export default function ArtistsContainer({ list }: ArtistsContainerProps) {
       )}
       {artist4 && (
         <Link href={`/artists/${artist4.artistName}`} className="flex">
-          <Card
-            className={`w-[240px] h-[295px] absolute right-0 top-0 rounded-lg`}
-          >
+          <Card className="w-[240px] h-[295px] absolute right-0 top-0 rounded-lg">
             <Image
               src={artist4.imgSrc}
               width={240}
@@ -112,9 +104,7 @@ export default function ArtistsContainer({ list }: ArtistsContainerProps) {
       )}
       {artist5 && (
         <Link href={`/artists/${artist5.artistName}`} className="flex">
-          <Card
-            className={`w-[400px] h-[352px] absolute left-0 bottom-0 rounded-lg`}
-          >
+          <Card className="w-[400px] h-[352px] absolute left-0 bottom-0 rounded-lg">
             <Image
               src={artist5.imgSrc}
               width={400}
@@ -135,9 +125,7 @@ export default function ArtistsContainer({ list }: ArtistsContainerProps) {
       )}
       {artist6 && (
         <Link href={`/artists/${artist6.artistName}`} className="flex">
-          <Card
-            className={`w-[280px] h-[408px] absolute left-[420px] bottom-0 rounded-lg`}
-          >
+          <Card className="w-[280px] h-[408px] absolute left-[420px] bottom-0 rounded-lg">
             <Image
               src={artist6.imgSrc}
               width={280}
@@ -158,9 +146,7 @@ export default function ArtistsContainer({ list }: ArtistsContainerProps) {
       )}
       {artist7 && (
         <Link href={`/artists/${artist7.artistName}`} className="flex">
-          <Card
-            className={`w-[240px] h-[332px] absolute left-[720px] bottom-0 rounded-lg`}
-          >
+          <Card className="w-[240px] h-[332px] absolute left-[720px] bottom-0 rounded-lg">
             <Image
               src={artist7.imgSrc}
               width={240}
@@ -181,9 +167,7 @@ export default function ArtistsContainer({ list }: ArtistsContainerProps) {
       )}
       {artist8 && (
         <Link href={`/artists/${artist8.artistName}`} className="flex">
-          <Card
-            className={`w-[300px] h-[332px] absolute right-0 bottom-0 rounded-lg`}
-          >
+          <Card className="w-[300px] h-[332px] absolute right-0 bottom-0 rounded-lg">
             <Image
               src={artist8.imgSrc}
               width={300}

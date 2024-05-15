@@ -12,7 +12,7 @@ export default function ArtistDetail({
   return (
     <div>
       <Image
-        src={`/mocks/artist/detail/artist_rize_detail.png`}
+        src="/mocks/artist/detail/artist_rize_detail.png"
         width={1280}
         height={640}
         alt={`아티스트 ${id} 대표 이미지`}
@@ -21,7 +21,7 @@ export default function ArtistDetail({
 
       <section className="flex flex-col items-center -mt-[75px] gap-[10px] mb-[100px]">
         <Image
-          src={`/mocks/artist/detail/artist_rize_logo.png`}
+          src="/mocks/artist/detail/artist_rize_logo.png"
           width={150}
           height={150}
           alt={`아티스트 ${id} 로고 이미지`}
