@@ -2,6 +2,8 @@
 
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import { useRecoilValue } from 'recoil';
+import authState from '@/store/auth';
 import {
   Navbar,
   NavbarBrand,
@@ -34,6 +36,7 @@ const items = [
 
 export default function Header() {
   const pathname = usePathname();
+  const auth = useRecoilValue(authState);
 
   return (
     <header className="h-16 mx-auto ">
@@ -67,22 +70,34 @@ export default function Header() {
         </NavbarContent>
 
         <NavbarContent justify="end" className="absolute right-[-127px] gap-7">
-          <NavbarItem key={4}>
-            {/* TODO: 로그인 기능 개발 후 수정 필요 */}
-            <Link href="/mypage" className="text-xl">
-              마이페이지
-            </Link>
-          </NavbarItem>
-          <NavbarItem>
-            <Link href="/signin" className="text-xl">
-              로그인
-            </Link>
-          </NavbarItem>
-          <NavbarItem>
-            <Link href="/signup" className="text-xl">
-              회원가입
-            </Link>
-          </NavbarItem>
+          {auth.isAuthenticated ? (
+            <>
+              <NavbarItem key={4}>
+                <Link href="/mypage" className="text-xl">
+                  마이페이지
+                </Link>
+              </NavbarItem>
+              <NavbarItem>
+                <span className="text-xl">환영합니다, {auth.userEmail}님</span>
+              </NavbarItem>
+              <NavbarItem>
+                <span className="text-xl">로그아웃</span>
+              </NavbarItem>
+            </>
+          ) : (
+            <>
+              <NavbarItem>
+                <Link href="/signin" className="text-xl">
+                  로그인
+                </Link>
+              </NavbarItem>
+              <NavbarItem>
+                <Link href="/signup" className="text-xl">
+                  회원가입
+                </Link>
+              </NavbarItem>
+            </>
+          )}
         </NavbarContent>
       </Navbar>
     </header>
