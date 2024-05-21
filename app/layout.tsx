@@ -1,8 +1,7 @@
-import type { Metadata } from 'next';
-import { Header, Footer } from '@/components/common';
 import { QueryClientProvider, NextUIProvider } from '@/lib';
 import '@/styles/globals.css';
 import { inter } from '../public/fonts/fonts';
+import ClientLayout from './client-layout';
 
 export const metadata: Metadata = {
   title: 'K-POP Goods',
@@ -16,12 +15,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko" className="bg-background">
-      <body className={`${inter.variable} text-white h-full min-h-screen `}>
+      <body className={`${inter.variable} text-white h-full min-h-screen`}>
         <NextUIProvider>
           <QueryClientProvider>
-            <Header />
-            <main className="h-full mx-auto mt-10 w-desktop">{children}</main>
-            <Footer />
+            <ClientLayout>{children}</ClientLayout>
           </QueryClientProvider>
         </NextUIProvider>
       </body>
