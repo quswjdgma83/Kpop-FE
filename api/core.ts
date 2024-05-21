@@ -1,6 +1,6 @@
 import axios, {
-  type AxiosInstance, 
-  AxiosError, 
+  type AxiosInstance,
+  AxiosError,
   InternalAxiosRequestConfig,
   AxiosResponse,
   Method,
@@ -30,6 +30,7 @@ axiosInstance.interceptors.request.use(
     }
     // eslint-disable-next-line no-param-reassign
     config.headers.Authorization = `Bearer ${accessToken}`;
+    console.log('토큰');
     return config;
   },
   (error: AxiosError) => {
@@ -52,7 +53,6 @@ const createApiMethod =
   (instance: AxiosInstance, method: Method) =>
   <T>(config: AxiosRequestConfig): Promise<BaseResponse<T>> =>
     instance({ ...config, method });
-
 
 export default {
   get: createApiMethod(axiosInstance, HTTP_METHODS.GET),
