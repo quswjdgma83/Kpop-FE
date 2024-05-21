@@ -1,5 +1,6 @@
 import { QueryClientProvider, NextUIProvider } from '@/lib';
 import '@/styles/globals.css';
+import type { Metadata } from 'next';
 import { inter } from '../public/fonts/fonts';
 import ClientLayout from './client-layout';
 

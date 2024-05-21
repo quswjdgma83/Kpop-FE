@@ -51,7 +51,7 @@ axiosInstance.interceptors.response.use(
 
 const createApiMethod =
   (instance: AxiosInstance, method: Method) =>
-  <T>(config: AxiosRequestConfig): Promise<BaseResponse<T>> =>
+  <T>(config: AxiosRequestConfig): Promise<AxiosResponse<BaseResponse<T>>> =>
     instance({ ...config, method });
 
 export default {

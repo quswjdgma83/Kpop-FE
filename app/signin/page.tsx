@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useCallback } from 'react';
-import { setCookies } from 'cookies-next';
+import { setCookie } from 'cookies-next';
 
 import { Input, Button } from '@nextui-org/react';
 import { useRecoilState } from 'recoil';
@@ -30,8 +30,8 @@ export default function Signin() {
           // const accessToken = response.headers['authorization'];
           // const refreshToken = response.headers['authorization-refresh'];
           // console.log(accessToken);
-          // setCookies('accessToken', accessToken);
-          // setCookies('refreshToken', refreshToken);
+          // setCookie('accessToken', accessToken);
+          // setCookie('refreshToken', refreshToken);
           console.log(response);
           setAuth({
             isAuthenticated: true,
