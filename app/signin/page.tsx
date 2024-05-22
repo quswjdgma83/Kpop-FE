@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useCallback } from 'react';
-import { setCookies } from 'cookies-next';
 
 import { Input, Button } from '@nextui-org/react';
 import { useRecoilState } from 'recoil';
@@ -24,7 +23,6 @@ export default function Signin() {
       const response = await postLogin({ userEmail: email, password });
       // const accessToken = response.data?.loginUser.accessToken;
       if (response.statusCode === 200) {
-        console.log(response.data);
         // const token = response.headers.get('Authorization');
         // console.log(token);
         if (response.statusCode === 200 && response.message === '로그인 성공') {
