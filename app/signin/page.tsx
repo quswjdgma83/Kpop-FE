@@ -24,15 +24,16 @@ export default function Signin() {
       const response = await postLogin({ userEmail: email, password });
       // const accessToken = response.data?.loginUser.accessToken;
       if (response.statusCode === 200) {
-        console.log(response.headers['authorization']);
-
+        console.log(response.data);
+        // const token = response.headers.get('Authorization');
+        // console.log(token);
         if (response.statusCode === 200 && response.message === '로그인 성공') {
-          // const accessToken = response.headers['authorization'];
+          const accessToken = response.headers['authorization'];
           // const refreshToken = response.headers['authorization-refresh'];
-          // console.log(accessToken);
+          console.log(accessToken);
           // setCookies('accessToken', accessToken);
           // setCookies('refreshToken', refreshToken);
-          console.log(response);
+          // console.log(response);
           setAuth({
             isAuthenticated: true,
             userEmail: email,
